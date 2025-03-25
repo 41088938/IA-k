@@ -1,0 +1,1 @@
+public enum infoPages{H1,H2,}

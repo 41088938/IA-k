@@ -1,0 +1,1 @@
+public enum applyAnser{E_01,E02,}
