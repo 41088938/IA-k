@@ -11,6 +11,9 @@ TagManager:
   - Dummy
   - package
   - vanInside
+  - Laser
+  - Enemy
+  - box
   layers:
   - Default
   - TransparentFX
