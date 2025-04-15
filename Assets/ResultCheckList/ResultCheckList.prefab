@@ -1107,7 +1107,6 @@ GameObject:
   - component: {fileID: 861960915010888047}
   - component: {fileID: 3324448649568435651}
   - component: {fileID: 7799797522223906956}
-  - component: {fileID: 3935565764381490942}
   m_Layer: 5
   m_Name: ResultCheckListPanel
   m_TagString: Untagged
@@ -1177,18 +1176,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3935565764381490942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7092392940970429624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 019f466d67818e744a3f64b9c3a14e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7355715078881851115
 GameObject:
   m_ObjectHideFlags: 0

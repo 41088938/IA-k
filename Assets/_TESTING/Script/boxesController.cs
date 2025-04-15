@@ -68,7 +68,7 @@ public class boxesController : MonoBehaviour
             go.transform.name = "icon" + x;
             icons[x] = go.GetComponent<Image>();
         }
-        Debug.Log(icons.Length);
+        StaticObjOrVar.NewGameUI[0].enabled = false;
         //Debug.Log(Boxes.Length);
             /*
             if (SceneManager.GetActiveScene().name== "GameScene_tester_non")
@@ -97,7 +97,6 @@ public class boxesController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                Debug.Log(hit.collider);
                 if (hit.collider.gameObject.tag == "box")
                 {
                     ClickedBox = hit.collider.gameObject;
@@ -228,6 +227,7 @@ public class boxesController : MonoBehaviour
                 }
                 else
                 {
+                    resultCheckList.AddCrossItem("You are missing these error:");
                     for (int x = 0; x < ans.Length; x++)
                     {
                         if (ans[x] != null)
@@ -251,7 +251,11 @@ public class boxesController : MonoBehaviour
             }
             else
             {
-                resultCheckList.AddCrossItem("This package has error, you should check it carefully!");
+                for (int x = 0; x < ans.Length; x++)
+                {
+                    resultCheckList.AddCrossItem(ans[x]);
+                }
+
                 icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
             }
         }
@@ -259,7 +263,7 @@ public class boxesController : MonoBehaviour
     }
     public void resetVar()
     {
-            //StaticObjOrVar.NewGameUI[5].enabled = false;
+            StaticObjOrVar.NewGameUI[5].enabled = false;
             resultCheckList.RemoveAll();
             resultCheckList.GetComponentInParent<Canvas>().enabled = false;
             Destroy(ClickedBox);
@@ -271,6 +275,11 @@ public class boxesController : MonoBehaviour
         {
             StaticObjOrVar.NewGameUI[7].enabled = true;
             StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time\n"+timerHolder.getTimer();
+            int temp = PackageICON.transform.childCount;
+            for (int x = 0; x < temp;x++)
+            {
+                PackageICON.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform;
+            }
 
         }
     }

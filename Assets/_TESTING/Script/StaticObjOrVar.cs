@@ -101,6 +101,7 @@ public class StaticObjOrVar : MonoBehaviour
         InProcedure5 = true;
         NewGameUI[4].enabled = false;
         NewGameUI[5].enabled = true;
+        reasons[0].enabled = true;
         pageNum++;
     }
     public void AcceptBtn()
@@ -112,6 +113,10 @@ public class StaticObjOrVar : MonoBehaviour
         ProcedureIcons[3].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
         InProcedure5 = false;
         pageNum = 1;
+        for (int x = 0; x < 3; x++)
+        {
+            reasons[x].enabled = false;
+        }
     }
     public void packagebtn()
     { 
