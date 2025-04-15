@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7558951672708273778
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      propertyPath: m_Name
+      value: Dry Ice_incorrect_case2.2 Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5589639683852606835}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8132562684912057515}
+  m_SourcePrefab: {fileID: 100100000, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+--- !u!1 &7216916898457463587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+  m_PrefabInstance: {fileID: 7558951672708273778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &-5589639683852606835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7216916898457463587}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.218, y: 0.12, z: 0.17}
+  m_Center: {x: 0, y: 0.06, z: 0}
+--- !u!114 &8132562684912057515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7216916898457463587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Airwaybill: {fileID: 21300000, guid: cac70bc92191c85458369e8473c51386, type: 3}
+  DGD: {fileID: 21300000, guid: 07ada4964eba1dc4dbb8c4fa1e74d5d7, type: 3}
+  AWBoption:
+  - Missing the "Net Quantity weight of Dry Ice"
+  - Incorrext Hazard Label
+  - Incorrect placement of the "shipper and consignee Mark"
+  - Missing the "Proper Shipping Name
+  - Missing the word"UN"
+  - Incorrect "UN number"
+  Packageoption:
+  - Incorrect usage of "DG statement" / Need to be removed
+  - Missing the word"UN"
+  - Missing the "Net Quantity of Dry Ice"
+  - Missing the "Proper Shipping Name"
+  - Incorrect "UN number"
+  Dgdoption:
+  - Non, there is no DGD
+  ans:
+  - Incorrext Hazard Label
+  - Missing the word"UN"
