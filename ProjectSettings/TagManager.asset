@@ -15,6 +15,7 @@ TagManager:
   - Enemy
   - box
   - point
+  - optionTag
   layers:
   - Default
   - TransparentFX

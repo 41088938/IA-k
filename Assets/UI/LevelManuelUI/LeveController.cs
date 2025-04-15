@@ -22,7 +22,7 @@ public class LeveController : MonoBehaviour
     public void applyLevel()
     {
         
-                SceneManager.LoadScene("GameScene_tester_non");//chang the scens name part to get to the right scens
+       SceneManager.LoadScene("GameScene_tester_non");//chang the scens name part to get to the right scens
          
     }
     public void CloseInfoPage()

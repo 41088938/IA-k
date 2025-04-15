@@ -9,6 +9,7 @@ public class StaticObjOrVar : MonoBehaviour
     public static Canvas[] NewGameUI = new Canvas[8];
     [SerializeField] Canvas[] reasons = new Canvas[3];
     [SerializeField] Image[] ProcedureIcons;
+    [SerializeField] boxesController boxescontroller;
     int pageNum = 1;
     public bool InProcedure5 = false;
     // Start is called before the first frame update
@@ -105,6 +106,12 @@ public class StaticObjOrVar : MonoBehaviour
     public void AcceptBtn()
     {
         NewGameUI[pageNum].enabled = false;
+        NewGameUI[6].enabled = true;
+        boxescontroller.checkAns();
+        ProcedureIcons[0].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
+        ProcedureIcons[3].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+        InProcedure5 = false;
+        pageNum = 1;
     }
     public void packagebtn()
     { 
@@ -124,9 +131,8 @@ public class StaticObjOrVar : MonoBehaviour
         reasons[1].enabled = false;
         reasons[2].enabled = true;
     }
-    public void OKBtn()
+    public void backMenu()
     {
-        NewGameUI[5].enabled = false;
-        NewGameUI[6].enabled = true;
+        SceneManager.LoadScene("HomePage");
     }
 }

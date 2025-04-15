@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Fungus;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class boxesController : MonoBehaviour
@@ -14,7 +16,7 @@ public class boxesController : MonoBehaviour
     //choose SAVER
     public string[] Choose;
     //GameObj
-
+    [SerializeField] TimerCode timerHolder;
     [SerializeField] GameObject PackageICON;
     Image[] icons;
     [SerializeField] GameObject bg;
@@ -92,7 +94,7 @@ public class boxesController : MonoBehaviour
             RaycastHit hit;
             Vector3 mousePosition = mouse.position.ReadValue();
             Ray ray = maincam.ScreenPointToRay(mousePosition);
-            
+
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log(hit.collider);
@@ -196,13 +198,14 @@ public class boxesController : MonoBehaviour
     }
     public void checkAns()
     {
-        int
         string[] ans = ClickedBox.GetComponent<DBofBox>().getAns();
         if (staticHolder.InProcedure5)
         {
+            int temp = 0;
             if (ans[0] == "correct")
             {
                 resultCheckList.AddCrossItem("It has no error!");
+                icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
             }
             else
             {
@@ -211,11 +214,31 @@ public class boxesController : MonoBehaviour
                     for (int y = 0; y < Choose.Length; y++)
                     {
                         if (ans[x] == Choose[y])
-                        { 
-                        
+                        {
+                            resultCheckList.AddTickItem(Choose[y]);
+                            ans[x] = null;
+                            temp++;
+                            break;
                         }
                     }
                 }
+                if (temp == ans.Length)
+                {
+                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
+                }
+                else
+                {
+                    for (int x = 0; x < ans.Length; x++)
+                    {
+                        if (ans[x] != null)
+                        {
+                            temp++;
+                            resultCheckList.AddCrossItem(ans[x]);
+                        }
+                    }
+                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
+                }
+
             }
         }
         else
@@ -223,11 +246,33 @@ public class boxesController : MonoBehaviour
             if (ans[0] == "correct")
             {
                 resultCheckList.AddTickItem("You are correct!");
+                icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
+
             }
             else
-            { 
-            
+            {
+                resultCheckList.AddCrossItem("This package has error, you should check it carefully!");
+                icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
             }
         }
+        HowManyBox++;
     }
+    public void resetVar()
+    {
+            //StaticObjOrVar.NewGameUI[5].enabled = false;
+            resultCheckList.RemoveAll();
+            resultCheckList.GetComponentInParent<Canvas>().enabled = false;
+            Destroy(ClickedBox);
+            bg.SetActive(false);
+            getBox = false;
+            StaticObjOrVar.NewGameUI[0].enabled = false;
+
+        if (HowManyBox == numberOfBox)
+        {
+            StaticObjOrVar.NewGameUI[7].enabled = true;
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time\n"+timerHolder.getTimer();
+
+        }
+    }
+
 }

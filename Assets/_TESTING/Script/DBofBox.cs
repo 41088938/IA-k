@@ -37,6 +37,12 @@ public class DBofBox : MonoBehaviour
 
     public void callOption()
     {
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("optionTag");
+        for (int x = 0; x < gos.Length; x++)
+        {
+            Destroy(gos[x]);
+        }
+
         for (int x = 0; x < AWBoption.Length; x++)
         {
             GameObject go = Instantiate(optiontext,GameObject.Find("Procedure5Canvas/AWBCanvas/Scroll View/Viewport/Content").transform);
