@@ -7,6 +7,6 @@ public class ResultCheckListPanel : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData _eventData)
     {
-        //ResultCheckList.GetResultCheckList().HideCheckList();
+        ResultCheckList.GetResultCheckList().HideCheckList();
     }
 }
