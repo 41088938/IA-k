@@ -27,22 +27,12 @@ public class checkBoxClick : MonoBehaviour
         if (!checkBox)
         {
             GetComponent<Image>().sprite = pics[1];
-            if (this.transform.parent.name.Contains("AWB"))
-                GameObject.FindFirstObjectByType<boxesController>().addOption("AWB", this.transform.parent.GetComponent<TMP_Text>().text);
-            if (this.transform.parent.name.Contains("Package"))
-                GameObject.FindFirstObjectByType<boxesController>().addOption("Package", this.transform.parent.GetComponent<TMP_Text>().text);
-            if (this.transform.parent.name.Contains("DGD"))
-                GameObject.FindFirstObjectByType<boxesController>().addOption("DGD", this.transform.parent.GetComponent<TMP_Text>().text);
+            GameObject.FindFirstObjectByType<boxesController>().addOption(this.transform.parent.GetComponent<TMP_Text>().text);
         }
         else
         {
             GetComponent<Image>().sprite = pics[0];
-            if (this.transform.parent.name.Contains("AWB"))
-                GameObject.FindFirstObjectByType<boxesController>().removeOption("AWB", this.transform.parent.GetComponent<TMP_Text>().text);
-            if (this.transform.parent.name.Contains("Package"))
-                GameObject.FindFirstObjectByType<boxesController>().removeOption("Package", this.transform.parent.GetComponent<TMP_Text>().text);
-            if (this.transform.parent.name.Contains("DGD"))
-                GameObject.FindFirstObjectByType<boxesController>().removeOption("DGD", this.transform.parent.GetComponent<TMP_Text>().text);
+                GameObject.FindFirstObjectByType<boxesController>().removeOption(this.transform.parent.GetComponent<TMP_Text>().text);
         }
         checkBox = !checkBox;
     }

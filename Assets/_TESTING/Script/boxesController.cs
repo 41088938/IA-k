@@ -12,9 +12,7 @@ using UnityEngine.UI;
 public class boxesController : MonoBehaviour
 {
     //choose SAVER
-    public string[] AWBChoose;
-    public string[] PackageChoose;
-    public string[] DGDChoose;
+    public string[] Choose;
     //GameObj
 
     [SerializeField] GameObject PackageICON;
@@ -24,6 +22,8 @@ public class boxesController : MonoBehaviour
     [SerializeField] GameObject BoxPoint;
     GameObject[] points;
     //Other
+    [SerializeField] StaticObjOrVar staticHolder;
+    [SerializeField] ResultCheckList resultCheckList;
     Camera maincam;
     [SerializeField]
     GameObject[] prefebs;
@@ -105,11 +105,9 @@ public class boxesController : MonoBehaviour
         }
 
     }
-    public void initArrays(int x,int y,int z)
+    public void initArrays(int x)
     {
-        AWBChoose = new string[x];
-        PackageChoose = new string[y];
-        DGDChoose = new string[z];
+        Choose = new string[x];
     }
     public void BoxClick()
     {
@@ -174,78 +172,62 @@ public class boxesController : MonoBehaviour
 
         return dest;
     }
-    public void addOption(string which,string msg)
+    public void addOption(string msg)
     {
-        if (which == "AWB")
-        {
-            for (int x = 0; x < AWBChoose.Length; x++)
+            for (int x = 0; x < Choose.Length; x++)
             {
-                if (AWBChoose[x] == null)
+                if (Choose[x] == null)
                 {
-                    AWBChoose[x] = msg;
+                    Choose[x] = msg;
                     break;
                 }
             }
-
-        }
-        else if (which == "DGD")
-        {
-            for (int x = 0; x < DGDChoose.Length; x++)
-            {
-                if (DGDChoose[x] == null)
-                {
-                    DGDChoose[x] = msg;
-                    break;
-                }
-            }
-        }
-        else
-        {
-            for (int x = 0; x < PackageChoose.Length; x++)
-            {
-                if (PackageChoose[x] == null)
-                {
-                    PackageChoose[x] = msg;
-                    break;
-                }
-            }
-        }
     }
-    public void removeOption(string which, string msg)
+    public void removeOption(string msg)
     {
-        if (which == "AWB")
-        {
-            for (int a = 0; a < AWBChoose.Length; a++)
+            for (int a = 0; a < Choose.Length; a++)
             {
-                if (AWBChoose[a] == msg)
+                if (Choose[a] == msg)
                 {
-                    AWBChoose[a] = null;
-                        break;
+                    Choose[a] = null;
+                    break;
                 }
             }
-        }
-        else if (which == "DGD")
+    }
+    public void checkAns()
+    {
+        int
+        string[] ans = ClickedBox.GetComponent<DBofBox>().getAns();
+        if (staticHolder.InProcedure5)
         {
-            for (int a = 0; a < DGDChoose.Length; a++)
+            if (ans[0] == "correct")
             {
-                if (DGDChoose[a] == msg)
+                resultCheckList.AddCrossItem("It has no error!");
+            }
+            else
+            {
+                for (int x = 0; x < ans.Length; x++)
                 {
-                    DGDChoose[a] = null;
-                    break;
+                    for (int y = 0; y < Choose.Length; y++)
+                    {
+                        if (ans[x] == Choose[y])
+                        { 
+                        
+                        }
+                    }
                 }
             }
         }
         else
         {
-            for (int a = 0; a < PackageChoose.Length; a++)
+            if (ans[0] == "correct")
             {
-                if (PackageChoose[a] == msg)
-                {
-                    PackageChoose[a] = null;
-                    break;
-                }
+                resultCheckList.AddTickItem("You are correct!");
+            }
+            else
+            { 
+            
             }
         }
-
     }
 }

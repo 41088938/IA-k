@@ -10,7 +10,7 @@ public class StaticObjOrVar : MonoBehaviour
     [SerializeField] Canvas[] reasons = new Canvas[3];
     [SerializeField] Image[] ProcedureIcons;
     int pageNum = 1;
-    bool InProcedure5 = false;
+    public bool InProcedure5 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[3] = GameObject.Find("Procedure3Canvas").GetComponent<Canvas>();//Procedure3
         NewGameUI[4] = GameObject.Find("Procedure4Canvas").GetComponent<Canvas>();//Procedure4
         NewGameUI[5] = GameObject.Find("Procedure5Canvas").GetComponent<Canvas>();//Procedure5,For wrong label/AWB/DGD
-        NewGameUI[6] = GameObject.Find("CheckList").GetComponent<Canvas>();//checkList for each item after checking?
+        NewGameUI[6] = GameObject.Find("ResultCheckList_Canvas").GetComponent<Canvas>();//checkList for each item after checking?
         NewGameUI[7] = GameObject.Find("FinishLevel").GetComponent<Canvas>();//Finish a level
 
 
@@ -103,8 +103,8 @@ public class StaticObjOrVar : MonoBehaviour
         pageNum++;
     }
     public void AcceptBtn()
-    { 
-        //
+    {
+        NewGameUI[pageNum].enabled = false;
     }
     public void packagebtn()
     { 
@@ -127,6 +127,6 @@ public class StaticObjOrVar : MonoBehaviour
     public void OKBtn()
     {
         NewGameUI[5].enabled = false;
-        NewGameUI[7].enabled = true;
+        NewGameUI[6].enabled = true;
     }
 }
