@@ -212,8 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2ecd979c44cad43b72d6d9284c5c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tableReference:
-    m_TableCollectionName: Different_Lang
   _resultCheckListPanel: {fileID: 7092392940970429624}
   _contentArea: {fileID: 441306121279117940}
   _leftPos: {fileID: 4371014807908198424}
@@ -474,7 +472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220, y: 120}
+  m_AnchoredPosition: {x: -325, y: 120}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5461491394651835442
@@ -1056,7 +1054,6 @@ GameObject:
   - component: {fileID: 5044297883939838229}
   - component: {fileID: 3525954954579783841}
   - component: {fileID: 7814886300126524171}
-  - component: {fileID: 804033919305836678}
   m_Layer: 5
   m_Name: lblCheckList
   m_TagString: Untagged
@@ -1113,8 +1110,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Check List
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 28261511b2ef41646a05e13422f40859, type: 2}
-  m_sharedMaterial: {fileID: -7273985193107322232, guid: 28261511b2ef41646a05e13422f40859, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1180,46 +1177,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &804033919305836678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7687327499056787887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StringReference:
-    m_TableReference:
-      m_TableCollectionName: GUID:b12877f93a4173044a3f7eac60393ba4
-    m_TableEntryReference:
-      m_KeyId: 43488633686040576
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  m_FormatArguments: []
-  m_UpdateString:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7814886300126524171}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &8222062417708257247
 GameObject:
   m_ObjectHideFlags: 0

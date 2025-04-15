@@ -128,7 +128,7 @@ public class ResultCheckList : MonoBehaviour
 
     public void AddCrossItem(string _str)
     {
-        GameObject find = tickItems.Find((obj) =>
+        GameObject find = crossItems.Find((obj) =>
         {
             return obj.name.Contains(_str);
         });
