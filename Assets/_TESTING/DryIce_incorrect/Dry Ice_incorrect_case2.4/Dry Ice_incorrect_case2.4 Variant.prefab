@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2293010580847050426
+--- !u!1001 &4802178549987151082
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,73 +8,73 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - target: {fileID: 919132149155446097, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       propertyPath: m_Name
-      value: Dry Ice_incorrect_case2.3 Variant
+      value: Dry Ice_incorrect_case2.4 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2404080289547610531}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+      addedObject: {fileID: 7404285081273497610}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6975792099311508999}
-  m_SourcePrefab: {fileID: 100100000, guid: fd89073118e27af4380d143ed74fff16, type: 3}
---- !u!1 &1374443585097991147 stripped
+      addedObject: {fileID: 4748362394220478536}
+  m_SourcePrefab: {fileID: 100100000, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
+--- !u!1 &5649108376516374971 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd89073118e27af4380d143ed74fff16, type: 3}
-  m_PrefabInstance: {fileID: 2293010580847050426}
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 021bbffd02034ec438f0557c255dfc0e, type: 3}
+  m_PrefabInstance: {fileID: 4802178549987151082}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2404080289547610531
+--- !u!65 &7404285081273497610
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374443585097991147}
+  m_GameObject: {fileID: 5649108376516374971}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -89,13 +89,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.218, y: 0.12, z: 0.17}
   m_Center: {x: 0, y: 0.06, z: 0}
---- !u!114 &6975792099311508999
+--- !u!114 &4748362394220478536
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374443585097991147}
+  m_GameObject: {fileID: 5649108376516374971}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
@@ -119,5 +119,5 @@ MonoBehaviour:
   Dgdoption:
   - Non, there is no DGD
   ans:
-  - Incorrect placement of the "shipper and consignee Mark"
-  - Missing the "Net Quantity of Dry Ice"
+  - Missing the "Proper Shipping Name"
+  - Missing the "Proper Shipping Name"
