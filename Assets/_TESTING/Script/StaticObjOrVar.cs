@@ -1,11 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StaticObjOrVar : MonoBehaviour
 {
-    public static Canvas[] NewGameUI = new Canvas[7];
+    public static Canvas[] NewGameUI = new Canvas[8];
+    [SerializeField] Canvas[] reasons = new Canvas[3];
+    [SerializeField] GameObject PackageICON;
     int pageNum = 1;
+    bool InProcedure5 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,25 +20,96 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[4] = GameObject.Find("Procedure4Canvas").GetComponent<Canvas>();//Procedure4
         NewGameUI[5] = GameObject.Find("Procedure5Canvas").GetComponent<Canvas>();//Procedure5,For wrong label/AWB/DGD
         NewGameUI[6] = GameObject.Find("CheckList").GetComponent<Canvas>();//checkList for each item after checking?
-        //NewGameUI[7] = GameObject.Find("FinishLevel").GetComponent<Canvas>();//Finish a level
-        Debug.Log(NewGameUI.Length);
+        NewGameUI[7] = GameObject.Find("FinishLevel").GetComponent<Canvas>();//Finish a level
     }
     public void NextPage()
     {
-        //if(pageNum != pagemaxnum)
-        NewGameUI[pageNum].enabled = false;
-        NewGameUI[pageNum+1].enabled = true;
-        pageNum++;
-    }
-    public void BackPage()
-    {
-        if(pageNum!=1)
+        if (!InProcedure5)
         {
-            NewGameUI[pageNum].enabled = false;
-            NewGameUI[pageNum - 1].enabled = true;
-            pageNum--;
+            if (pageNum != 4)
+            {
+                NewGameUI[pageNum].enabled = false;
+                NewGameUI[pageNum + 1].enabled = true;
+                pageNum++;
+            }
+        }
+        else
+        {
+            if (pageNum != 3 && pageNum !=5)
+            {
+                NewGameUI[pageNum].enabled = false;
+                NewGameUI[pageNum + 1].enabled = true;
+                pageNum++;
+            }
+            else if(pageNum == 3 && pageNum !=5)
+            {
+                NewGameUI[pageNum].enabled = false;
+                NewGameUI[pageNum + 2].enabled = true;
+                pageNum+=2;
+            }
         }
 
     }
+    public void BackPage()
+    {
+        if (!InProcedure5)
+        {
+            if (pageNum != 1)
+            {
+                NewGameUI[pageNum].enabled = false;
+                NewGameUI[pageNum - 1].enabled = true;
+                pageNum--;
+            }
+        }
+        else
+        {
+            if (pageNum == 5)
+            {
+                NewGameUI[pageNum].enabled = false;
+                NewGameUI[pageNum - 2].enabled = true;
+                pageNum -= 2;
+            }
+            else if (pageNum != 1)
+            {
+                NewGameUI[pageNum].enabled = false;
+                NewGameUI[pageNum - 1].enabled = true;
+                pageNum--;
+            }
+        }
 
+
+    }
+    public void NotAcceptBtn()
+    {
+        InProcedure5 = true;
+        NewGameUI[4].enabled = false;
+        NewGameUI[5].enabled = true;
+    }
+    public void AcceptBtn()
+    { 
+        //
+    }
+    public void packagebtn()
+    { 
+        reasons[0].enabled = true;
+        reasons[1].enabled = false;
+        reasons[2].enabled = false;
+    }
+    public void AWBbtn()
+    {
+        reasons[0].enabled = false;
+        reasons[1].enabled = true;
+        reasons[2].enabled = false;
+    }
+    public void DGDbtn()
+    {
+        reasons[0].enabled = false;
+        reasons[1].enabled = false;
+        reasons[2].enabled = true;
+    }
+    public void OKBtn()
+    {
+        NewGameUI[5].enabled = false;
+        NewGameUI[7].enabled = true;
+    }
 }

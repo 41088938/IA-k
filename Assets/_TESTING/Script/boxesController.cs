@@ -12,12 +12,14 @@ using UnityEngine.UIElements;
 public class boxesController : MonoBehaviour
 {
     //GameObj
-    GameObject[] Boxes;
-    GameObject[] BoxesSelected;
+    public string[] AWBChoose;
+    public string[] PackageChoose;
+    public string[] DGDChoose;
+    [SerializeField] GameObject PackageICON;
+    Image[] icons;
     [SerializeField] GameObject bg;
     GameObject ClickedBox = null;
     [SerializeField] GameObject BoxPoint;
-    [SerializeField] StaticObjOrVar StaticObjOrVar;
     GameObject[] points;
     //Other
     Camera maincam;
@@ -35,9 +37,14 @@ public class boxesController : MonoBehaviour
         points = GameObject.FindGameObjectsWithTag("point");
         bg.SetActive(false);
         maincam = GameObject.Find("Main Camera").GetComponent<Camera>();
-        Boxes = GameObject.FindGameObjectsWithTag("box");
+        //how many package here
         if (SceneManager.GetActiveScene().name == "GameScene_tester_non")
+        {
             numberOfBox = 3;
+            icons = new Image[3];
+        }
+
+        //
         pointsWithRand = new GameObject[numberOfBox];
         for(int x =0; x< numberOfBox;x++)
         {
@@ -53,6 +60,7 @@ public class boxesController : MonoBehaviour
             clone.transform.parent = GameObject.Find("van/RandomBoxes").transform;
             clone.transform.position =  pointsWithRand[x].transform.position;
             clone.transform.Rotate(0,90,0);
+            
         }
         //Debug.Log(Boxes.Length);
             /*
@@ -92,6 +100,12 @@ public class boxesController : MonoBehaviour
         }
 
     }
+    public void initArrays(int x,int y,int z)
+    {
+        AWBChoose = new string[x];
+        PackageChoose = new string[y];
+        DGDChoose = new string[z];
+    }
     public void BoxClick()
     {
         StaticObjOrVar.NewGameUI[0].enabled = true;
@@ -100,7 +114,7 @@ public class boxesController : MonoBehaviour
         getBox = true;
         ClickedBox.transform.position = BoxPoint.transform.position;
         ClickedBox.GetComponent<DBofBox>().callImage();
-        
+        ClickedBox.GetComponent<DBofBox>().callOption();
     }
     public void TurnLeft()
     {
@@ -128,5 +142,96 @@ public class boxesController : MonoBehaviour
 
         return dest;
     }
+    public string[] RemoveAt(string[] source, int index)
+    {
+        int temp = 0;
+        string[] dest = new string[source.Length - 1];
+        for (int x = 0; x < source.Length; x++)
+        {
+            if (x == index)
+            {
+                temp++;
+                continue;
+            }
 
+            dest[x - temp] = source[x];
+
+        }
+
+        return dest;
+    }
+    public void addOption(string which,string msg)
+    {
+        if (which == "AWB")
+        {
+            for (int a = 0; a < AWBChoose.Length; a++)
+            {
+                if (AWBChoose[a] == "")
+                {
+                    AWBChoose[a] = msg;
+                    break;
+                }
+            }
+        }
+        else if (which == "DGD")
+        {
+            for (int a = 0; a < DGDChoose.Length; a++)
+            {
+                if (DGDChoose[a] == "")
+                {
+                    DGDChoose[a] = msg;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            for (int a = 0; a < AWBChoose.Length; a++)
+            {
+                if (AWBChoose[a] == "")
+                {
+                    AWBChoose[a] = msg;
+                    break;
+                }
+            }
+        }
+        Debug.Log("Added "+which + ", " + msg);
+    }
+    public void removeOption(string which, string msg)
+    {
+        if (which == "AWB")
+        {
+            for (int a = 0; a < AWBChoose.Length; a++)
+            {
+                if (AWBChoose[a] == msg)
+                {
+                    AWBChoose= RemoveAt(AWBChoose, a);
+                    break;
+                }
+            }
+        }
+        else if (which == "DGD")
+        {
+            for (int a = 0; a < DGDChoose.Length; a++)
+            {
+                if (DGDChoose[a] == msg)
+                {
+                    DGDChoose = RemoveAt(DGDChoose,a);
+                    break;
+                }
+            }
+        }
+        else
+        {
+            for (int a = 0; a < PackageChoose.Length; a++)
+            {
+                if (PackageChoose[a] == msg)
+                {
+                    PackageChoose = RemoveAt(PackageChoose, a);
+                    break;
+                }
+            }
+        }
+        Debug.Log("Removed "+which + ", " + msg);
+    }
 }
