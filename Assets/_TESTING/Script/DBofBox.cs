@@ -32,6 +32,7 @@ public class DBofBox : MonoBehaviour
     public void callImage()
     { 
         GameObject.Find("Procedure2Canvas/Image").GetComponent<Image>().sprite = Airwaybill;
+        GameObject.Find("Procedure2Canvas/Image").GetComponent<Image>().preserveAspect = true;
         GameObject.Find("Procedure3Canvas/Scroll View/Viewport/Content/Image").GetComponent<Image>().sprite = DGD;
     }
 
