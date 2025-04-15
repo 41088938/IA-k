@@ -274,7 +274,7 @@ public class boxesController : MonoBehaviour
         if (HowManyBox == numberOfBox)
         {
             StaticObjOrVar.NewGameUI[7].enabled = true;
-            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time\n"+timerHolder.getTimer();
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time Left\n"+timerHolder.getTimer();
             int temp = PackageICON.transform.childCount;
             for (int x = 0; x < temp;x++)
             {
