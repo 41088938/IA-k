@@ -33,7 +33,8 @@ public class boxesController : MonoBehaviour
         bg.SetActive(false);
         maincam = GameObject.Find("Main Camera").GetComponent<Camera>();
         Boxes = GameObject.FindGameObjectsWithTag("box");
-        Debug.Log(Boxes.Length);
+        //Debug.Log(Boxes.Length);
+        /*
         if (SceneManager.GetActiveScene().name== "GameScene_tester_non")
             BoxesSelected = new GameObject[3];
         for (int x = 0; x < BoxesSelected.Length; x++)
@@ -43,7 +44,7 @@ public class boxesController : MonoBehaviour
             Boxes[ran].SetActive(false);
             Boxes = RemoveAt(Boxes, ran);
         }
-
+        */
     }
 
     // Update is called once per frame
@@ -71,6 +72,7 @@ public class boxesController : MonoBehaviour
     public void BoxClick()
     {
         StaticObjOrVar.NewGameUI[0].enabled = true;
+        StaticObjOrVar.NewGameUI[1].enabled = true;
         bg.SetActive(true);
         getBox = true;
         ClickedBox.transform.position = BoxPoint.transform.position;
