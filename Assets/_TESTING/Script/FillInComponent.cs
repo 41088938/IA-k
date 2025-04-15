@@ -15,13 +15,13 @@ public class FillInComponent : MonoBehaviour
             "Incorrext Hazard Label",
             "Incorrect placement of the \"shipper and consignee Mark\"",
             "Missing the \"Proper Shipping Name\" in AWB",
-            "Missing the word\"UN\"",
+            "Missing the word \"UN\"",
             "Incorrect \"UN number\""
         };
         temp.Packageoption = new string[]
         {
             "Incorrect usage of \"DG statement\" / Need to be removed",
-            "Missing the word\"UN\"",
+            "Missing the word \"UN\"",
             "Missing the \"Net Quantity of Dry Ice\"",
             "Missing the \"Proper Shipping Name\"",
             "Incorrect \"UN number\""
