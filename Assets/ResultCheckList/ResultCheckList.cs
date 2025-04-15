@@ -93,6 +93,16 @@ public class ResultCheckList : MonoBehaviour
         return m_resultCheckList;
     }
 
+    static public void AddTickItemToCheckList(string _str)
+    {
+        m_resultCheckList.AddTickItem(_str);
+    }
+
+    static public void AddCrossItemToCheckList(string _str)
+    {
+        m_resultCheckList.AddCrossItem(_str);
+    }
+
     public void AddTickItem(string _str)
     {
         GameObject find = tickItems.Find((obj) =>
@@ -128,7 +138,7 @@ public class ResultCheckList : MonoBehaviour
 
     public void AddCrossItem(string _str)
     {
-        GameObject find = tickItems.Find((obj) =>
+        GameObject find = crossItems.Find((obj) =>
         {
             return obj.name.Contains(_str);
         });
