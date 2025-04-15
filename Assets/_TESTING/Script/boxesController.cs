@@ -7,14 +7,16 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class boxesController : MonoBehaviour
 {
-    //GameObj
+    //choose SAVER
     public string[] AWBChoose;
     public string[] PackageChoose;
     public string[] DGDChoose;
+    //GameObj
+
     [SerializeField] GameObject PackageICON;
     Image[] icons;
     [SerializeField] GameObject bg;
@@ -28,8 +30,8 @@ public class boxesController : MonoBehaviour
     //var
     GameObject[] pointsWithRand;
     public bool getBox = false;
-    bool turnBox = false;
     int numberOfBox = 0;
+    public int HowManyBox = 0;
     UnityEngine.InputSystem.Mouse mouse;
     // Start is called before the first frame update
     void Start()
@@ -43,7 +45,6 @@ public class boxesController : MonoBehaviour
             numberOfBox = 3;
             icons = new Image[3];
         }
-
         //
         pointsWithRand = new GameObject[numberOfBox];
         for(int x =0; x< numberOfBox;x++)
@@ -60,8 +61,12 @@ public class boxesController : MonoBehaviour
             clone.transform.parent = GameObject.Find("van/RandomBoxes").transform;
             clone.transform.position =  pointsWithRand[x].transform.position;
             clone.transform.Rotate(0,90,0);
-            
+            GameObject go = Instantiate(Resources.Load<GameObject>("OX/packageICON"));
+            go.transform.parent = PackageICON.transform;
+            go.transform.name = "icon" + x;
+            icons[x] = go.GetComponent<Image>();
         }
+        Debug.Log(icons.Length);
         //Debug.Log(Boxes.Length);
             /*
             if (SceneManager.GetActiveScene().name== "GameScene_tester_non")
@@ -113,6 +118,15 @@ public class boxesController : MonoBehaviour
         bg.SetActive(true);
         getBox = true;
         ClickedBox.transform.position = BoxPoint.transform.position;
+        if (!ClickedBox.transform.name.Contains("barrelpackage"))
+        {
+            icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/box");
+        }
+        else
+        {
+            //no barrel pic
+            icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/white");
+        }
         ClickedBox.GetComponent<DBofBox>().callImage();
         ClickedBox.GetComponent<DBofBox>().callOption();
     }
@@ -164,38 +178,38 @@ public class boxesController : MonoBehaviour
     {
         if (which == "AWB")
         {
-            for (int a = 0; a < AWBChoose.Length; a++)
+            for (int x = 0; x < AWBChoose.Length; x++)
             {
-                if (AWBChoose[a] == "")
+                if (AWBChoose[x] == null)
                 {
-                    AWBChoose[a] = msg;
+                    AWBChoose[x] = msg;
                     break;
                 }
             }
+
         }
         else if (which == "DGD")
         {
-            for (int a = 0; a < DGDChoose.Length; a++)
+            for (int x = 0; x < DGDChoose.Length; x++)
             {
-                if (DGDChoose[a] == "")
+                if (DGDChoose[x] == null)
                 {
-                    DGDChoose[a] = msg;
+                    DGDChoose[x] = msg;
                     break;
                 }
             }
         }
         else
         {
-            for (int a = 0; a < AWBChoose.Length; a++)
+            for (int x = 0; x < PackageChoose.Length; x++)
             {
-                if (AWBChoose[a] == "")
+                if (PackageChoose[x] == null)
                 {
-                    AWBChoose[a] = msg;
+                    PackageChoose[x] = msg;
                     break;
                 }
             }
         }
-        Debug.Log("Added "+which + ", " + msg);
     }
     public void removeOption(string which, string msg)
     {
@@ -205,8 +219,8 @@ public class boxesController : MonoBehaviour
             {
                 if (AWBChoose[a] == msg)
                 {
-                    AWBChoose= RemoveAt(AWBChoose, a);
-                    break;
+                    AWBChoose[a] = null;
+                        break;
                 }
             }
         }
@@ -216,7 +230,7 @@ public class boxesController : MonoBehaviour
             {
                 if (DGDChoose[a] == msg)
                 {
-                    DGDChoose = RemoveAt(DGDChoose,a);
+                    DGDChoose[a] = null;
                     break;
                 }
             }
@@ -227,11 +241,11 @@ public class boxesController : MonoBehaviour
             {
                 if (PackageChoose[a] == msg)
                 {
-                    PackageChoose = RemoveAt(PackageChoose, a);
+                    PackageChoose[a] = null;
                     break;
                 }
             }
         }
-        Debug.Log("Removed "+which + ", " + msg);
+
     }
 }

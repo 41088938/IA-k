@@ -22,7 +22,7 @@ public class TimerCode : MonoBehaviour
         timer -= Time.deltaTime;  //time is a float
         int seconds = ((int)timer % 60);
         int minutes = ((int)timer / 60);
-        text.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        text.text = "Time\n"+string.Format("{0:00}:{1:00}", minutes, seconds);
     }
     public string getTimer()
     {

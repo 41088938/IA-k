@@ -58,6 +58,6 @@ public class DBofBox : MonoBehaviour
             go.transform.GetChild(1).GetComponent<Button>().enabled = false;
             go.transform.GetChild(0).GetComponent<Image>().enabled = false;
         }
-        GameObject.FindAnyObjectByType<boxesController>().initArrays(3, 3, 3);
+        GameObject.FindAnyObjectByType<boxesController>().initArrays(AWBoption.Length, Packageoption.Length, Dgdoption.Length);
     }
 }
