@@ -31,4 +31,27 @@ public class FillInComponent : MonoBehaviour
             "Non, there is no DGD"
         };
     }
+
+    [ContextMenu("Add Battery")]
+    public void AddBattery()
+    {
+        DBofBox temp = GetComponent<DBofBox>();
+        if (temp == null) temp = gameObject.AddComponent<DBofBox>();
+        temp.AWBoption = new string[]
+        {
+            "Incorrect placement of the \"shipper and consignee Mark\"",
+            "Missing \"UN Number\"",
+            "Incorrect usage of lithium or sodium ion battery label"
+        };
+        temp.Packageoption = new string[]
+        {
+            "Incorrect usage of \"DG statement\"",
+            "Incorrect Lithium metal batteries Section II statement.",
+            "Missing Lithium metal batteries Section II statement."
+        };
+        temp.Dgdoption = new string[]
+        {
+            "Non, there is no DGD"
+        };
+    }
 }
