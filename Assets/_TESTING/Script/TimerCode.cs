@@ -6,6 +6,7 @@ using UnityEngine;
 public class TimerCode : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
     TMP_Text text;
     public float timer = 0;
     bool timerStop = false;
@@ -18,7 +19,7 @@ public class TimerCode : MonoBehaviour
     void Update()
     {
         if(!timerStop)
-        timer += Time.deltaTime;  //time is a float
+        timer -= Time.deltaTime;  //time is a float
         int seconds = ((int)timer % 60);
         int minutes = ((int)timer / 60);
         text.text = string.Format("{0:00}:{1:00}", minutes, seconds);
@@ -29,4 +30,5 @@ public class TimerCode : MonoBehaviour
         int minutes = ((int)timer / 60);
         return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+    
 }

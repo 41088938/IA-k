@@ -14,6 +14,7 @@ TagManager:
   - Laser
   - Enemy
   - box
+  - point
   layers:
   - Default
   - TransparentFX

@@ -18,33 +18,56 @@ public class boxesController : MonoBehaviour
     GameObject ClickedBox = null;
     [SerializeField] GameObject BoxPoint;
     [SerializeField] StaticObjOrVar StaticObjOrVar;
-
+    GameObject[] points;
     //Other
     Camera maincam;
-
+    [SerializeField]
+    GameObject[] prefebs;
     //var
+    GameObject[] pointsWithRand;
     public bool getBox = false;
     bool turnBox = false;
+    int numberOfBox = 0;
     UnityEngine.InputSystem.Mouse mouse;
     // Start is called before the first frame update
     void Start()
     {
-        
+        points = GameObject.FindGameObjectsWithTag("point");
         bg.SetActive(false);
         maincam = GameObject.Find("Main Camera").GetComponent<Camera>();
         Boxes = GameObject.FindGameObjectsWithTag("box");
-        //Debug.Log(Boxes.Length);
-        /*
-        if (SceneManager.GetActiveScene().name== "GameScene_tester_non")
-            BoxesSelected = new GameObject[3];
-        for (int x = 0; x < BoxesSelected.Length; x++)
+        if (SceneManager.GetActiveScene().name == "GameScene_tester_non")
+            numberOfBox = 3;
+        pointsWithRand = new GameObject[numberOfBox];
+        for(int x =0; x< numberOfBox;x++)
         {
-            int ran = UnityEngine.Random.Range(0, Boxes.Length);
-            BoxesSelected[x] = Boxes[ran];
-            Boxes[ran].SetActive(false);
-            Boxes = RemoveAt(Boxes, ran);
+            int ran = UnityEngine.Random.Range(0, points.Length);
+            pointsWithRand[x] = points[ran];
+            points = RemoveAt(points, ran);
         }
-        */
+
+        for(int x = 0; x<pointsWithRand.Length;x++)
+        {
+            int ran = UnityEngine.Random.Range(0, prefebs.Length);
+            GameObject clone = Instantiate(prefebs[ran],new Vector3(0,0,0), new Quaternion(0,0,0,0));
+            clone.transform.parent = GameObject.Find("van/RandomBoxes").transform;
+            clone.transform.position =  pointsWithRand[x].transform.position;
+            clone.transform.Rotate(0,90,0);
+        }
+        //Debug.Log(Boxes.Length);
+            /*
+            if (SceneManager.GetActiveScene().name== "GameScene_tester_non")
+                BoxesSelected = new GameObject[3];
+            for (int x = 0; x < BoxesSelected.Length; x++)
+            {
+                int ran = UnityEngine.Random.Range(0, Boxes.Length);
+                BoxesSelected[x] = Boxes[ran];
+                Boxes[ran].SetActive(false);
+                Boxes = RemoveAt(Boxes, ran);
+            }
+            */
+
+
     }
 
     // Update is called once per frame
@@ -76,6 +99,7 @@ public class boxesController : MonoBehaviour
         bg.SetActive(true);
         getBox = true;
         ClickedBox.transform.position = BoxPoint.transform.position;
+        ClickedBox.GetComponent<DBofBox>().callImage();
         
     }
     public void TurnLeft()
