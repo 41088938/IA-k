@@ -10,11 +10,11 @@ public class DBofBox : MonoBehaviour
     [SerializeField]
     Sprite DGD;
     [SerializeField]
-    string[] AWBoption;
+    public string[] AWBoption;
     [SerializeField]
-    string[] Packageoption;
+    public string[] Packageoption;
     [SerializeField]
-    string[] Dgdoption;
+    public string[] Dgdoption;
     GameObject optiontext;
     [SerializeField]
     string[] ans;
