@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Airwaybill: {fileID: 21300000, guid: cac70bc92191c85458369e8473c51386, type: 3}
+  Airwaybill: {fileID: 21300000, guid: 27fa17629cb511c4086481b2454e29c6, type: 3}
   DGD: {fileID: 21300000, guid: 07ada4964eba1dc4dbb8c4fa1e74d5d7, type: 3}
   AWBoption:
   - Incorrect usage of "DG statement" / Need to be removed
