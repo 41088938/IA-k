@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 896578365790190737}
   - component: {fileID: 1135955316612080342}
   - component: {fileID: 2093021046419110357}
+  - component: {fileID: 4232931810692923267}
   m_Layer: 0
   m_Name: DryIce_Correct Variant
   m_TagString: box
@@ -136,8 +137,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2192797, y: 0.115421236, z: 0.16732217}
-  m_Center: {x: -0.012876746, y: 0.06027189, z: 0.114201546}
+  m_Size: {x: 0.21722083, y: 0.115421236, z: 0.16950856}
+  m_Center: {x: 0.0020721455, y: 0.06027189, z: 0.0011996726}
 --- !u!114 &2093021046419110357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Airwaybill: {fileID: 21300000, guid: cac70bc92191c85458369e8473c51386, type: 3}
-  DGD: {fileID: 21300000, guid: 07ada4964eba1dc4dbb8c4fa1e74d5d7, type: 3}
+  DGD: {fileID: 21300000, guid: 4e1590a8aa22ddc4989da6193def552c, type: 3}
   AWBoption:
   - Incorrect usage of "DG statement" / Need to be removed
   - Missing the word "UN"
@@ -169,6 +170,21 @@ MonoBehaviour:
   - Non, there is no DGD
   ans:
   - correct
+--- !u!114 &4232931810692923267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520897934607853099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956d7be95af56d845a8b1421fb46fcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  speed: 60
+  inverted: 1
 --- !u!1 &1496251127768172378
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +376,7 @@ Transform:
   m_GameObject: {fileID: 7251243997123101244}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014, y: 0, z: 0.114}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

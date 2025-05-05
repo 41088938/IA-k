@@ -19,11 +19,14 @@ public class LeveController : MonoBehaviour
     {
         SceneManager.LoadScene("HomePage");
     }
-    public void applyLevel()
+    public void applyLevel(int x)
     {
-        
-       SceneManager.LoadScene("GameScene_tester_non");//chang the scens name part to get to the right scens
-         
+        if (x == 0)
+            SceneManager.LoadScene("GameScene_tester_non");//chang the scens name part to get to the right scens
+        else if (x == 1)
+            SceneManager.LoadScene("Intermediate_Level");
+        else if (x==2)
+            SceneManager.LoadScene("Advance_Level");
     }
     public void CloseInfoPage()
     {

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.TextCore.Text;
@@ -32,6 +33,7 @@ public class Rotate3DObject1 : MonoBehaviour
 
     [SerializeField] private bool inverted;//for inverting the axis rotation
 
+    bool selected = false;
     #endregion
 
     private void Awake()
@@ -84,14 +86,18 @@ public class Rotate3DObject1 : MonoBehaviour
 
     private void Update()
     {
+        selected = (this.gameObject == StaticObjOrVar.selectedObj);
         if (!rotateAllowed)
             return;//check rotateAllowed, if null return avoid EX calculation
+        if (selected)
+        {
+            Vector2 MouseDelta = GetMouseLookInput();//store MouseDelta as Vector2
 
-        Vector2 MouseDelta = GetMouseLookInput();//store MouseDelta as Vector2
+            MouseDelta *= speed * Time.deltaTime;
 
-        MouseDelta *= speed * Time.deltaTime;
+            this.gameObject.transform.Rotate(Vector3.up * (inverted ? -1 : 1), MouseDelta.x, Space.World);//rotate GameObject by world location,left and right 
+                                                                                                          //transform.Rotate(Vector3.right * (inverted ? 1 : -1), MouseDelta.y, Space.World);// rotate GameObject by world location, up and down
+        }
 
-        transform.Rotate(Vector3.up * (inverted ? -1 : 1), MouseDelta.x, Space.World);//rotate GameObject by world location,left and right 
-        //transform.Rotate(Vector3.right * (inverted ? 1 : -1), MouseDelta.y, Space.World);// rotate GameObject by world location, up and down
     }
 }

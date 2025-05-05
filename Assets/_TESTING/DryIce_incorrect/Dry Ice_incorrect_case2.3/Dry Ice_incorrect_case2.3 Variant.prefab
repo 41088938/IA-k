@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd89073118e27af4380d143ed74fff16, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6975792099311508999}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fd89073118e27af4380d143ed74fff16, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7027933907689356109}
   m_SourcePrefab: {fileID: 100100000, guid: fd89073118e27af4380d143ed74fff16, type: 3}
 --- !u!1 &1374443585097991147 stripped
 GameObject:
@@ -122,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Airwaybill: {fileID: 21300000, guid: 63760076168d39c4483c266ab4250651, type: 3}
-  DGD: {fileID: 21300000, guid: 07ada4964eba1dc4dbb8c4fa1e74d5d7, type: 3}
+  DGD: {fileID: 21300000, guid: 4e1590a8aa22ddc4989da6193def552c, type: 3}
   AWBoption:
   - Incorrect usage of "DG statement" / Need to be removed
   - Missing the word "UN"
@@ -141,3 +144,18 @@ MonoBehaviour:
   ans:
   - Incorrect placement of the "shipper and consignee Mark"
   - Missing the "Net Quantity of Dry Ice"
+--- !u!114 &7027933907689356109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374443585097991147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956d7be95af56d845a8b1421fb46fcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  speed: 60
+  inverted: 1

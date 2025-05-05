@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8132562684912057515}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1101796906320107200}
   m_SourcePrefab: {fileID: 100100000, guid: 0ade7b4f9fc770842a4f13947271076a, type: 3}
 --- !u!1 &7216916898457463587 stripped
 GameObject:
@@ -122,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Airwaybill: {fileID: 21300000, guid: 27fa17629cb511c4086481b2454e29c6, type: 3}
-  DGD: {fileID: 21300000, guid: 07ada4964eba1dc4dbb8c4fa1e74d5d7, type: 3}
+  DGD: {fileID: 21300000, guid: 4e1590a8aa22ddc4989da6193def552c, type: 3}
   AWBoption:
   - Incorrect usage of "DG statement" / Need to be removed
   - Missing the word "UN"
@@ -141,3 +144,18 @@ MonoBehaviour:
   ans:
   - Incorrext Hazard Label
   - Missing the word "UN"
+--- !u!114 &1101796906320107200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7216916898457463587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956d7be95af56d845a8b1421fb46fcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  speed: 60
+  inverted: 1

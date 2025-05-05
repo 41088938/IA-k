@@ -18,10 +18,12 @@ public class DBofBox : MonoBehaviour
     GameObject optiontext;
     [SerializeField]
     string[] ans;
+
     // Start is called before the first frame update
     void Start()
     {
         optiontext = Resources.Load<GameObject>("OptionsText");
+
     }
 
     // Update is called once per frame
@@ -31,8 +33,8 @@ public class DBofBox : MonoBehaviour
     }
     public void callImage()
     { 
-        GameObject.Find("Procedure2Canvas/Image").GetComponent<Image>().sprite = Airwaybill;
-        GameObject.Find("Procedure2Canvas/Image").GetComponent<Image>().preserveAspect = true;
+        GameObject.Find("Procedure2Canvas/AWBDA/AWB_ScrollRect/Image").GetComponent<Image>().sprite = Airwaybill;
+        //GameObject.Find("Procedure2Canvas/Image").GetComponent<Image>().preserveAspect = true;
         GameObject.Find("Procedure3Canvas/Scroll View/Viewport/Content/Image").GetComponent<Image>().sprite = DGD;
     }
 
@@ -49,21 +51,33 @@ public class DBofBox : MonoBehaviour
             GameObject go = Instantiate(optiontext,GameObject.Find("Procedure5Canvas/AWBCanvas/Scroll View/Viewport/Content").transform);
             go.transform.name = "AWBoption" + (x + 1);
             go.GetComponent<TMP_Text>().text = AWBoption[x];
+            go.transform.GetChild(2).gameObject.SetActive(false);
         }
         for (int x = 0; x < Packageoption.Length; x++)
         {
             GameObject go = Instantiate(optiontext, GameObject.Find("Procedure5Canvas/PackageCanvas/Scroll View/Viewport/Content").transform);
             go.transform.name = "Packageoption" + (x + 1);
             go.GetComponent<TMP_Text>().text = Packageoption[x];
+            if (Packageoption[x].Contains("Missing"))
+            {
+                go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sample_Label");
+            }
+
+            else
+            {
+                go.transform.GetChild(2).gameObject.SetActive(false);
+            }
         }
         for (int x = 0; x < Dgdoption.Length; x++)
         {
             GameObject go = Instantiate(optiontext, GameObject.Find("Procedure5Canvas/DGDCanvas/Scroll View/Viewport/Content").transform);
             go.transform.name = "DGDoption" + (x + 1);
+            
             go.GetComponent<TMP_Text>().text = Dgdoption[x];
             if (Dgdoption[0] == "NAN, there is no DGD")
             go.transform.GetChild(1).GetComponent<Button>().enabled = false;
             go.transform.GetChild(0).GetComponent<Image>().enabled = false;
+            go.transform.GetChild(2).gameObject.SetActive(false);
         }
         GameObject.FindAnyObjectByType<boxesController>().initArrays(AWBoption.Length+Packageoption.Length+Dgdoption.Length);
     }
@@ -71,4 +85,5 @@ public class DBofBox : MonoBehaviour
     {
         return ans;
     }
+
 }

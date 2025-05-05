@@ -82,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4cdcb17625f440849ae90e2f1fec2c9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2763512372772390423}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4cdcb17625f440849ae90e2f1fec2c9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571774976763414626}
   m_SourcePrefab: {fileID: 100100000, guid: 4cdcb17625f440849ae90e2f1fec2c9a, type: 3}
 --- !u!1 &7446785639784585192 stripped
 GameObject:
@@ -107,8 +110,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.218, y: 0.12, z: 0.17}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.218, y: 0.11905863, z: 0.17}
+  m_Center: {x: 0, y: 0.059254717, z: 0}
 --- !u!114 &2763512372772390423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Airwaybill: {fileID: 21300000, guid: 8856820241f28054bb0c122ecc692d40, type: 3}
-  DGD: {fileID: 21300000, guid: 07ada4964eba1dc4dbb8c4fa1e74d5d7, type: 3}
+  DGD: {fileID: 21300000, guid: 4e1590a8aa22ddc4989da6193def552c, type: 3}
   AWBoption:
   - Incorrect usage of "DG statement" / Need to be removed
   - Missing the word "UN"
@@ -141,3 +144,18 @@ MonoBehaviour:
   ans:
   - Incorrect "UN number"
   - Missing the word "UN"
+--- !u!114 &571774976763414626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7446785639784585192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956d7be95af56d845a8b1421fb46fcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  speed: 60
+  inverted: 1

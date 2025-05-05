@@ -10,8 +10,10 @@ public class StaticObjOrVar : MonoBehaviour
     [SerializeField] Canvas[] reasons = new Canvas[3];
     [SerializeField] Image[] ProcedureIcons;
     [SerializeField] boxesController boxescontroller;
+    public static GameObject ICONBTN;
     int pageNum = 1;
     public bool InProcedure5 = false;
+    public static GameObject selectedObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,8 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[5] = GameObject.Find("Procedure5Canvas").GetComponent<Canvas>();//Procedure5,For wrong label/AWB/DGD
         NewGameUI[6] = GameObject.Find("ResultCheckList_Canvas").GetComponent<Canvas>();//checkList for each item after checking?
         NewGameUI[7] = GameObject.Find("FinishLevel").GetComponent<Canvas>();//Finish a level
+        ICONBTN = GameObject.Find("Procedure5Canvas/ICON");//ICON in Pro 5
+        ICONBTN.SetActive(false);
 
 
     }

@@ -100,6 +100,7 @@ public class boxesController : MonoBehaviour
                 if (hit.collider.gameObject.tag == "box")
                 {
                     ClickedBox = hit.collider.gameObject;
+                    StaticObjOrVar.selectedObj = ClickedBox;
                     BoxClick();
                 }
             }
