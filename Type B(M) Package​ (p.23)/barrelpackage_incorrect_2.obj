@@ -1,6 +1,6 @@
 # Blender 4.2.9 LTS
 # www.blender.org
-mtllib barrelpackage_incorrect.mtl
+mtllib barrelpackage_incorrect_2.mtl
 o Cylinder
 v -0.000000 1.597174 -0.902369
 v 0.000000 3.115779 -0.902369
