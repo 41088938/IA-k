@@ -1,6 +1,6 @@
 # Blender 4.2.9 LTS
 # www.blender.org
-mtllib flammable_box_incorrect_4.mtl
+mtllib flammable_liquid_incorrect_4.mtl
 o Cube
 v 1.000000 1.353515 -1.980201
 v 1.000000 -1.353515 -1.980201
