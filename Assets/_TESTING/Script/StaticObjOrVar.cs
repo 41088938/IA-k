@@ -144,4 +144,20 @@ public class StaticObjOrVar : MonoBehaviour
     {
         SceneManager.LoadScene("HomePage");
     }
+    public static void callFinish()
+    {
+        for (int x = 0; x < 7; x++)
+        {
+            NewGameUI[x].enabled = false;
+        }
+        NewGameUI[7].enabled = true;
+        try
+        {
+            boxesController.resetVarInTime();
+        }
+        catch (Exception e)
+        { 
+        
+        }
+    }
 }

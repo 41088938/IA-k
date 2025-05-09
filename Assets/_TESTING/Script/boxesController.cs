@@ -47,6 +47,21 @@ public class boxesController : MonoBehaviour
             numberOfBox = 3;
             icons = new Image[3];
         }
+        else if (SceneManager.GetActiveScene().name == "Intermediate_Level")
+        {
+            numberOfBox = 5;
+            icons = new Image[5];
+        }
+        else if (SceneManager.GetActiveScene().name == "Advance_Level")
+        {
+            numberOfBox = 6;
+            icons = new Image[6];
+        }
+        else if (SceneManager.GetActiveScene().name == "TimeTrial")
+        {
+            numberOfBox = 3;
+            icons = new Image[3];
+        }
         //
         pointsWithRand = new GameObject[numberOfBox];
         for(int x =0; x< numberOfBox;x++)
@@ -275,14 +290,27 @@ public class boxesController : MonoBehaviour
         if (HowManyBox == numberOfBox)
         {
             StaticObjOrVar.NewGameUI[7].enabled = true;
-            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time Left\n"+timerHolder.getTimer();
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time\n" + timerHolder.getTimer();
             int temp = PackageICON.transform.childCount;
-            for (int x = 0; x < temp;x++)
+            for (int x = 0; x < temp; x++)
             {
                 PackageICON.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform;
             }
 
         }
+    }
+    public static void resetVarInTime()//for time trial
+    {
+        GameObject temp2 = GameObject.Find("GameCommonUINew/GameObject");
+        StaticObjOrVar.NewGameUI[7].enabled = true;
+        StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time Left\n" + TimerCode.getTimerStatic();
+        int temp = temp2.transform.childCount;
+        for (int x = 0; x < temp; x++)
+        {
+            temp2.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform;
+        }
+        
+
     }
 
 }

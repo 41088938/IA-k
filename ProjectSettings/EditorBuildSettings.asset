@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_TESTING/Scene/GameScene_tester_non.unity
     guid: 26ab96e2c279da94da21d26e24117b7f
+  - enabled: 1
+    path: Assets/_TESTING/Scene/Advance_Level.unity
+    guid: 5a0230ff10b1abb4e9ca1d4a4d8fbb60
+  - enabled: 1
+    path: Assets/_TESTING/Scene/Intermediate_Level.unity
+    guid: d6d8c98b9a80cc743b0d5d7b0f2a064b
+  - enabled: 1
+    path: Assets/_TESTING/Scene/TimeTrial.unity
+    guid: 6d865bf297191ee40b279449965b3607
   m_configObjects: {}

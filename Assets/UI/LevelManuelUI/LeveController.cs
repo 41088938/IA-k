@@ -25,8 +25,10 @@ public class LeveController : MonoBehaviour
             SceneManager.LoadScene("GameScene_tester_non");//chang the scens name part to get to the right scens
         else if (x == 1)
             SceneManager.LoadScene("Intermediate_Level");
-        else if (x==2)
+        else if (x == 2)
             SceneManager.LoadScene("Advance_Level");
+        else if (x == 3)
+            SceneManager.LoadScene("TimeTrial");
     }
     public void CloseInfoPage()
     {
