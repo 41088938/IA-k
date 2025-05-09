@@ -31,6 +31,7 @@ public class TimerCode : MonoBehaviour
             if (timer < 0)
             {
                 StaticObjOrVar.callFinish();
+                GameObject.Find("StopClick").GetComponent<BoxCollider>().enabled = true;
                 timerStop = true;
             }
         }
@@ -58,4 +59,5 @@ public class TimerCode : MonoBehaviour
         int minutes = ((int)timerStatic / 60);
         return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
 }

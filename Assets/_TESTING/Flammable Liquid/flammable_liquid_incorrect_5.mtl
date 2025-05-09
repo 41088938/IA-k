@@ -1,0 +1,82 @@
+# Blender 4.2.9 LTS MTL File: 'boxed.blend'
+# www.blender.org
+
+newmtl Material
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.407237 0.356404 0.274680
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Screenshot_2025-04-01_151141
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd image_folder/Screenshot 2025-04-01 151141.png
+map_d image_folder/Screenshot 2025-04-01 151141.png
+
+newmtl Screenshot_2025-04-02_141724
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd image_folder/Screenshot 2025-04-02 141724.png
+map_d image_folder/Screenshot 2025-04-02 141724.png
+
+newmtl Screenshot_2025-04-02_141838
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd image_folder/Screenshot 2025-04-02 141838.png
+map_d image_folder/Screenshot 2025-04-02 141838.png
+
+newmtl image29
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd image_folder/wrong.png
+map_d image_folder/wrong.png
+
+newmtl image30
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd image_folder/image30.png
+map_d image_folder/image30.png
+
+newmtl image32
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd image_folder/image32.png
+map_d image_folder/image32.png
+
+newmtl text1
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd image_folder/text5.png
+map_d image_folder/text5.png

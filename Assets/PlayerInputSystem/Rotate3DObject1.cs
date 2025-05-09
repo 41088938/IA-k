@@ -64,7 +64,10 @@ public class Rotate3DObject1 : MonoBehaviour
 
        
     }
-
+    public void setSelect(bool a)
+    {
+        selected = a;
+    }
     protected virtual void OnLeftClickPressed(InputAction.CallbackContext context)
     {
         if (context.started || context.performed)

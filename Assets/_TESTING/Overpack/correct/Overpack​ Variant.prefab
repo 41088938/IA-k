@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1605644504473925780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 24.48
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 38.74
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_Name
+      value: "Overpack\u200B Variant"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_TagString
+      value: box
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701301799562459933, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9e8ced7e5a507545a36100c13f74d51, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3222583944593746138}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7995638012490955981}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 520891409330972324}
+  m_SourcePrefab: {fileID: 100100000, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+--- !u!1 &1912073787104609733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 353df64152261354d82b5879bb41b47a, type: 3}
+  m_PrefabInstance: {fileID: 1605644504473925780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3222583944593746138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912073787104609733}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.46327972, y: 0.6493933, z: 1.2882004}
+  m_Center: {x: -0.001411438, y: 0.32583928, z: -0.00031661987}
+--- !u!114 &7995638012490955981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912073787104609733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956d7be95af56d845a8b1421fb46fcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  speed: 60
+  inverted: 1
+--- !u!114 &520891409330972324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912073787104609733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Airwaybill: {fileID: 21300000, guid: 7ca9ee32d97e0aa4ea54a3643456b8f4, type: 3}
+  DGD: {fileID: 21300000, guid: d1d08a4244cd1a2429e8a79aaad04e42, type: 3}
+  AWBoption:
+  - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D"
+  - "Missing \u201CCargo Aircraft Only\u201D or \u201CCAO\u201D"
+  Packageoption:
+  - "Missing the word \u201CUN\u201D"
+  - "Incorrect \u201CUN number\u201D"
+  - Missing the net quantity
+  - Missing Div 5.1 Hazard Label
+  - Not Required to have UN packaging
+  - "Missing the word \u201COverpack\u201D"
+  - "Missing additional \u201COrientation Label\u201D on the opposite side"
+  - "Improper affix of the \u201COrientation Label\u201D"
+  - Missing CAO Handling Label
+  - Incorrect Div 6.1 Hazard Label
+  - "Incorrect the \u201CProper Shipping Name\u201D"
+  - Not Required to have UN packaging
+  Dgdoption:
+  - Missing Page Number
+  - Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft type
+  - Missing Full name of City or Airport
+  - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D"
+  - "Missing the word \u201COverpack used\u201D"
+  - "Incorrect \u201CUN number\u201D"
+  - "Incorrect \u201CClass or Division\u201D"
+  - Missing Subsidiary Hazard
+  - "Incorrect \u201CProper Shipping Name\u201D"
+  - "Missing \u201C24hr Emergency contact number\u201D"
+  - "Incorrect \u201CPacking Group\u201D"
+  - "Missing \u201CSignature\u201D"
+  - "Incorrect \u201CPacking Instruction\u201D"
+  ans:
+  - correct

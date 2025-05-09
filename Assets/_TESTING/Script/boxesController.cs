@@ -54,13 +54,13 @@ public class boxesController : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "Advance_Level")
         {
-            numberOfBox = 6;
-            icons = new Image[6];
+            numberOfBox = 8;
+            icons = new Image[8];
         }
         else if (SceneManager.GetActiveScene().name == "TimeTrial")
         {
-            numberOfBox = 3;
-            icons = new Image[3];
+            numberOfBox = 4;
+            icons = new Image[4];
         }
         //
         pointsWithRand = new GameObject[numberOfBox];
