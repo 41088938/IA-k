@@ -62,7 +62,6 @@ public class DBofBox : MonoBehaviour
             {
                 go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sample_Label");
             }
-
             else
             {
                 go.transform.GetChild(2).gameObject.SetActive(false);
