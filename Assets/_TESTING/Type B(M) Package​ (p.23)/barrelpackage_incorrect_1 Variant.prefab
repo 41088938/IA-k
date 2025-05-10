@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Airwaybill: {fileID: 21300000, guid: 8dc257b28de93314580d0d02defb3dca, type: 3}
-  DGD: {fileID: 21300000, guid: 7c93057838fbbab4dad109649f96d9ab, type: 3}
+  Airwaybill: {fileID: 21300000, guid: 9577644813a4682449984d0e46fc9c15, type: 3}
+  DGD: {fileID: 21300000, guid: 9cd62470ec0163b40ae44e15ebee6a40, type: 3}
   AWBoption:
   - "Incorrect \u201CDG Statement\u201D"
   - "Missing \u201CDG statement\u201D"
@@ -170,4 +170,6 @@ MonoBehaviour:
   - "Incorrect \u201CDIM\u201D declared"
   - "Missing \u201C24hr Emergency contact number\u201D"
   ans:
-  - correct
+  - Missing Full name of City or Airport
+  - "Incorrect \u201CDG Statement\u201D"
+  - "Incorrect \u201CPSN\u201D"
