@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Android;
+//using UnityEngine.InputSystem.Android;
 using UnityEngine.UI;
 
 public class ReasonReasonQustionSet : MonoBehaviour
 {
     [SerializeField] string[] packageRection1;//REQ
+
 
     [SerializeField] string[] awbRection1;//REQ
 
