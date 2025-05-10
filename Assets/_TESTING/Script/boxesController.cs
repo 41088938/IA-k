@@ -73,11 +73,20 @@ public class boxesController : MonoBehaviour
 
         for(int x = 0; x<pointsWithRand.Length;x++)
         {
+            GameObject clone;
             int ran = UnityEngine.Random.Range(0, prefebs.Length);
-            GameObject clone = Instantiate(prefebs[ran],new Vector3(0,0,0), new Quaternion(0,0,0,0));
+            clone = Instantiate(prefebs[ran],new Vector3(0,0,0), new Quaternion(0,0,0,0));
+            clone = Instantiate(prefebs[ran], new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
             clone.transform.parent = GameObject.Find("van/RandomBoxes").transform;
             clone.transform.position =  pointsWithRand[x].transform.position;
-            clone.transform.Rotate(0,90,0);
+            if (prefebs[ran].transform.name.Contains("flammable"))
+            clone.transform.Rotate(0, 180, 0);
+            else if (prefebs[ran].transform.name.Contains("barrelpackage"))
+                clone.transform.Rotate(-90, 0, 0);
+            else
+                clone.transform.Rotate(0, 90, 0);
+            if (prefebs[ran].transform.name.Contains("barrelpackage"))
+                clone.transform.Translate(0,0, 0.35f);
             GameObject go = Instantiate(Resources.Load<GameObject>("OX/packageICON"));
             go.transform.parent = PackageICON.transform;
             go.transform.name = "icon" + x;
@@ -133,6 +142,8 @@ public class boxesController : MonoBehaviour
         bg.SetActive(true);
         getBox = true;
         ClickedBox.transform.position = BoxPoint.transform.position;
+        if (ClickedBox.transform.name.Contains("barrelpackage"))
+            ClickedBox.transform.Translate(0, 0, 0.2f);
         if (!ClickedBox.transform.name.Contains("barrelpackage"))
         {
             icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/box");

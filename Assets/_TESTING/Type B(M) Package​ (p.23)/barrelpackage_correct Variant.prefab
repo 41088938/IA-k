@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4183394020946427341}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: -0, z: -0.01574}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0, z: -0.01603}
   m_LocalScale: {x: 0.01, y: 0.010000002, z: 0.010000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5623497097696592921}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &5296256997398160370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39,6 +39,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.264406
@@ -53,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       propertyPath: m_LocalRotation.x
@@ -65,11 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -79,9 +91,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       propertyPath: m_Name
       value: barrelpackage_correct Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
+      propertyPath: m_TagString
+      value: box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -93,6 +113,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1097341770265831842}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5226376866270602627}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5345404644506252565}
   m_SourcePrefab: {fileID: 100100000, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
 --- !u!1 &4990406735414238883 stripped
 GameObject:
@@ -120,6 +146,65 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020104855, y: 0.02020715, z: 0.031575024}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5226376866270602627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4990406735414238883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956d7be95af56d845a8b1421fb46fcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  speed: 60
+  inverted: 1
+--- !u!114 &5345404644506252565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4990406735414238883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Airwaybill: {fileID: 21300000, guid: 8dc257b28de93314580d0d02defb3dca, type: 3}
+  DGD: {fileID: 21300000, guid: 7c93057838fbbab4dad109649f96d9ab, type: 3}
+  AWBoption:
+  - "Incorrect \u201CDG Statement\u201D"
+  - "Missing \u201CDG statement\u201D"
+  - "Missing the wording  \u201CCAO\u201D"
+  Packageoption:
+  - "Incorrect \u201CPSN\u201D"
+  - "Incorrect \u201CUN number\u201D"
+  - Missing "Serial Number"
+  - "Missing \u201CTrefoil\u201D Symbol"
+  - "Missing \u201CPermissible Gross Weight"
+  - "Incorrect \u201DCategory\u201D Label"
+  - "Missing \u201DCategory\u201D Label on the opposite side"
+  - "Missing \u201DCAO\u201D Label on the opposite side"
+  Dgdoption:
+  - Missing Page Number
+  - Missing Full name of City or Airport
+  - Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft type
+  - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D"
+  - "Missing the word \u201CUN\u201D"
+  - "Incorrect \u201CCategory\u201D declared"
+  - "Incorrect \u201CUN number\u201D"
+  - "Incorrect \u201CProper Shipping Name\u201D"
+  - "Incorrect \u201CType of Package\u201D and Activity declared"
+  - "Missing \u201CIdentification mark\u201D"
+  - "Missing the word \u201CAttached\u201D"
+  - "Incorrect \u201CT.I.\u201D declared"
+  - "Incorrect \u201CDIM\u201D declared"
+  - "Missing \u201C24hr Emergency contact number\u201D"
+  ans:
+  - correct
 --- !u!4 &5623497097696592921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 22fb028c5de59c6429e06a291daf9339, type: 3}
