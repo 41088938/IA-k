@@ -25,6 +25,7 @@ public class BookControler : MonoBehaviour
 
         book_animator.Play("Book_In_Animation");
         r3d_controler.enabled = false;
+        Debug.Log("Hi");
 
 
     }
