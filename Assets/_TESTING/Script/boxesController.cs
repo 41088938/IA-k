@@ -151,7 +151,7 @@ public class boxesController : MonoBehaviour
         else
         {
             //no barrel pic
-            icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/white");
+            icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel");
         }
         ClickedBox.GetComponent<DBofBox>().callImage();
         ClickedBox.GetComponent<DBofBox>().callOption();
@@ -231,6 +231,9 @@ public class boxesController : MonoBehaviour
             if (ans[0] == "correct")
             {
                 resultCheckList.AddCrossItem("It has no error!");
+                if(ClickedBox.transform.name.Contains("barrel"))
+                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
+                else
                 icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
             }
             else
@@ -250,7 +253,10 @@ public class boxesController : MonoBehaviour
                 }
                 if (temp == ans.Length)
                 {
-                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
+                    if (ClickedBox.transform.name.Contains("barrel"))
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_O");
+                    else
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
                 }
                 else
                 {
@@ -263,7 +269,10 @@ public class boxesController : MonoBehaviour
                             resultCheckList.AddCrossItem(ans[x]);
                         }
                     }
-                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
+                    if (ClickedBox.transform.name.Contains("barrel"))
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
+                    else
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
                 }
 
             }
@@ -273,7 +282,10 @@ public class boxesController : MonoBehaviour
             if (ans[0] == "correct")
             {
                 resultCheckList.AddTickItem("You are correct!");
-                icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
+                if (ClickedBox.transform.name.Contains("barrel"))
+                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_O");
+                else
+                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
 
             }
             else
@@ -282,8 +294,10 @@ public class boxesController : MonoBehaviour
                 {
                     resultCheckList.AddCrossItem(ans[x]);
                 }
-
-                icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
+                if (ClickedBox.transform.name.Contains("barrel"))
+                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
+                else
+                    icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
             }
         }
         HowManyBox++;

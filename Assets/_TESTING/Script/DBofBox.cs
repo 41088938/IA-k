@@ -58,13 +58,72 @@ public class DBofBox : MonoBehaviour
             GameObject go = Instantiate(optiontext, GameObject.Find("Procedure5Canvas/PackageCanvas/Scroll View/Viewport/Content").transform);
             go.transform.name = "Packageoption" + (x + 1);
             go.GetComponent<TMP_Text>().text = Packageoption[x];
-            if (Packageoption[x].Contains("Missing"))
+            if (this.gameObject.name.Contains("Dry"))
             {
-                go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Sample_Label");
+                if (Packageoption[x].Contains("UN"))
+                {
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Dry_ice/Dry_ice_Missing_UN");
+                }
+                else if (Packageoption[x].Contains("Hazard"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Dry_ice/Missing_Hazard_Label");
+                else
+                    go.transform.GetChild(2).gameObject.SetActive(false);
             }
-            else
+            else if (this.gameObject.name.Contains("flammable"))
             {
-                go.transform.GetChild(2).gameObject.SetActive(false);
+                if (Packageoption[x].Contains("Orientation"))
+                {
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Flammable/Flammable_Missing_Orientation_Label");
+                }
+                else if (Packageoption[x].Contains("Subsidiary"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Flammable/Flammable_Missing_Subsidiary_Hazard_Label");
+                else if (Packageoption[x].Contains("Type_Code"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Flammable/Flammable_Missing_Type_Code");
+                else if (Packageoption[x].Contains("UN"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Flammable/Flammable_Missing_UN");
+                else
+                    go.transform.GetChild(2).gameObject.SetActive(false);
+            }
+            else if (this.gameObject.name.Contains("Lithium"))
+            {
+                if (Packageoption[x].Contains("sodium"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Lithium/lithium_Missing_sodium_ion_battery_label");
+                else if (Packageoption[x].Contains("number"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Lithium/lithium_Missing_UN_number");
+                else if (Packageoption[x].Contains("UN"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Lithium/lithium_Missing_UN");
+                else
+                    go.transform.GetChild(2).gameObject.SetActive(false);
+            }
+            else if (this.gameObject.name.Contains("overpack"))
+            {
+                if (Packageoption[x].Contains("CAO"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/CAO_Label");
+                else if (Packageoption[x].Contains("5.1"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Hazard_Label_5.1");
+                else if (Packageoption[x].Contains("6.1"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Hazard_Label_6");
+                else if (Packageoption[x].Contains("Orientation"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Overpack_Missing_Orientation_Label");
+                else if (Packageoption[x].Contains("UN"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Overpack_Missing_UN");
+                else
+                    go.transform.GetChild(2).gameObject.SetActive(false);
+            }
+            else if (this.gameObject.name.Contains("barrel"))
+            {
+                if (Packageoption[x].Contains("CAO"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/CAO_Label");
+                else if (Packageoption[x].Contains("Category"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/Category_Label");
+                else if (Packageoption[x].Contains("Gross"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/Permissible_Gross_Weight");
+                else if (Packageoption[x].Contains("Trefoil"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/Trefoil_Symbol");
+                else if (Packageoption[x].Contains("UN"))
+                    go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/Type_B_Missing_UN");
+                else
+                    go.transform.GetChild(2).gameObject.SetActive(false);
             }
         }
         for (int x = 0; x < Dgdoption.Length; x++)
