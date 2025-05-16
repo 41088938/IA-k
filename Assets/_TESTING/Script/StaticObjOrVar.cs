@@ -112,13 +112,21 @@ public class StaticObjOrVar : MonoBehaviour
         else
         {
 
-            if (x == 4||pageNum==5)
+            if (x == 4)
             {
                 NewGameUI[pageNum].enabled = false;
-                ProcedureIcons[pageNum - 2].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+                ProcedureIcons[pageNum - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
                 NewGameUI[x + 1].enabled = true;
                 ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
                 pageNum = x + 1;
+            }
+            else if(pageNum == 5)
+            {
+                NewGameUI[pageNum].enabled = false;
+                ProcedureIcons[pageNum - 2].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+                NewGameUI[x].enabled = true;
+                ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
+                pageNum = x;
             }
             else
             {
