@@ -13,6 +13,7 @@ public class TimerCode : MonoBehaviour
     static float timerStatic = 0;
     bool timerStop = false;
     string scenename;
+    
     void Start()
     {
         scenename = SceneManager.GetActiveScene().name;
@@ -33,6 +34,7 @@ public class TimerCode : MonoBehaviour
                 StaticObjOrVar.callFinish();
                 GameObject.Find("StopClick").GetComponent<BoxCollider>().enabled = true;
                 timerStop = true;
+                
             }
         }
         else if (!timerStop)
@@ -59,5 +61,8 @@ public class TimerCode : MonoBehaviour
         int minutes = ((int)timerStatic / 60);
         return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-
+    public void setTimerStop(bool s)
+    {
+        timerStop = s;
+    }
 }

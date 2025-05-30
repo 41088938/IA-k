@@ -10,10 +10,15 @@ public class StaticObjOrVar : MonoBehaviour
     [SerializeField] Canvas[] reasons = new Canvas[3];
     [SerializeField] Image[] ProcedureIcons;
     [SerializeField] boxesController boxescontroller;
+    [SerializeField] Canvas Menu;
+    [SerializeField] TimerCode timer;
+    [SerializeField] RectTransform movementRect;
     public static GameObject ICONBTN;
     int pageNum = 1;
     public bool InProcedure5 = false;
     public static GameObject selectedObj;
+    bool moveMenuBool = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,7 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[7] = GameObject.Find("FinishLevel").GetComponent<Canvas>();//Finish a level
         ICONBTN = GameObject.Find("Procedure5Canvas/ICON");//ICON in Pro 5
         ICONBTN.SetActive(false);
+
 
     }
     public void NextPage()
@@ -197,6 +203,23 @@ public class StaticObjOrVar : MonoBehaviour
         catch (Exception e)
         { 
         
+        }
+    }
+    public void openMenu()
+    {
+        Menu.enabled = true;
+        timer.setTimerStop(true);
+        boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = true;
+        StartCoroutine(moveMenu());
+    }
+    IEnumerator moveMenu()
+    {
+        movementRect.anchoredPosition = new Vector2(-1000, 0);
+        while (movementRect.anchoredPosition.x <= 0)
+        {
+            movementRect.anchoredPosition = Vector2.Lerp(movementRect.anchoredPosition, new Vector2(1, 0), 0.2f);
+            yield return new WaitForSeconds(0.02f);
+            Debug.Log(movementRect.anchoredPosition);
         }
     }
 }

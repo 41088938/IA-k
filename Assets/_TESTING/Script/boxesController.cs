@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Fungus;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -20,7 +19,7 @@ public class boxesController : MonoBehaviour
     [SerializeField] GameObject PackageICON;
     Image[] icons;
     [SerializeField] GameObject bg;
-    GameObject ClickedBox = null;
+    public GameObject ClickedBox = null;
     [SerializeField] GameObject BoxPoint;
     GameObject[] points;
     //Other

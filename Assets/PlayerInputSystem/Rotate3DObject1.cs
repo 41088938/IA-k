@@ -25,7 +25,7 @@ public class Rotate3DObject1 : MonoBehaviour
 
     #region Variables
 
-    private bool rotateAllowed;//allowed only press the Left Button
+    public bool rotateAllowed;//allowed only press the Left Button
 
     private Camera _camera;
 
@@ -34,6 +34,8 @@ public class Rotate3DObject1 : MonoBehaviour
     [SerializeField] private bool inverted;//for inverting the axis rotation
 
     bool selected = false;
+
+    public bool pause;
     #endregion
 
     private void Awake()
@@ -92,7 +94,7 @@ public class Rotate3DObject1 : MonoBehaviour
         selected = (this.gameObject == StaticObjOrVar.selectedObj);
         if (!rotateAllowed)
             return;//check rotateAllowed, if null return avoid EX calculation
-        if (selected)
+        if (selected&&!pause)
         {
             Vector2 MouseDelta = GetMouseLookInput();//store MouseDelta as Vector2
 
