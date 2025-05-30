@@ -29,10 +29,12 @@ public class boxesController : MonoBehaviour
     [SerializeField]
     GameObject[] prefebs;
     //var
+    public int correctBox = 0;
     GameObject[] pointsWithRand;
     public bool getBox = false;
     int numberOfBox = 0;
     public int HowManyBox = 0;
+    static int correctboxstatic = 0;
     UnityEngine.InputSystem.Mouse mouse;
     // Start is called before the first frame update
     void Start()
@@ -154,6 +156,12 @@ public class boxesController : MonoBehaviour
         }
         ClickedBox.GetComponent<DBofBox>().callImage();
         ClickedBox.GetComponent<DBofBox>().callOption();
+        string[] temp = ClickedBox.GetComponent<DBofBox>().getAns();
+        for (int x = 0; x < temp.Length; x++)
+        {
+            Debug.Log(temp[x]);
+        }
+;
     }
     public void TurnLeft()
     {
@@ -256,6 +264,8 @@ public class boxesController : MonoBehaviour
                         icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_O");
                     else
                         icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
+                    correctBox++;
+                    correctboxstatic++;
                 }
                 else
                 {
@@ -285,7 +295,8 @@ public class boxesController : MonoBehaviour
                     icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_O");
                 else
                     icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
-
+                correctBox++;
+                correctboxstatic++;
             }
             else
             {
@@ -303,6 +314,9 @@ public class boxesController : MonoBehaviour
     }
     public void resetVar()
     {
+        //******************
+        //Now only Time Trial, may not move with other
+        //******************
             StaticObjOrVar.NewGameUI[5].enabled = false;
             resultCheckList.RemoveAll();
             resultCheckList.GetComponentInParent<Canvas>().enabled = false;
@@ -314,7 +328,10 @@ public class boxesController : MonoBehaviour
         if (HowManyBox == numberOfBox)
         {
             StaticObjOrVar.NewGameUI[7].enabled = true;
-            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time\n" + timerHolder.getTimer();
+            //FinishLevel/TotalTime/Time
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+ (int)timerHolder.getTimerFloat();
+            //FinishLevel/Score/Time
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+((int)timerHolder.getTimerFloat()*correctBox);
             int temp = PackageICON.transform.childCount;
             for (int x = 0; x < temp; x++)
             {
@@ -323,11 +340,15 @@ public class boxesController : MonoBehaviour
 
         }
     }
-    public static void resetVarInTime()//for time trial
+    public static void resetVarInTime()//for time trial, if no time
     {
+        //******************
+        //Now only Time Trial, may not move with other
+        //******************
         GameObject temp2 = GameObject.Find("GameCommonUINew/GameObject");
         StaticObjOrVar.NewGameUI[7].enabled = true;
-        StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "Total Time Left\n" + TimerCode.getTimerStatic();
+        StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "" + (int)TimerCode.getTimerLeftStatic();
+        StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = "" + ((int)TimerCode.getTimerLeftStatic() * correctboxstatic);
         int temp = temp2.transform.childCount;
         for (int x = 0; x < temp; x++)
         {

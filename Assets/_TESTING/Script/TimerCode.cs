@@ -12,11 +12,15 @@ public class TimerCode : MonoBehaviour
     public float timer = 0;
     static float timerStatic = 0;
     bool timerStop = false;
+    public float totalTime = 0;
+    static float totalTimeStatic = 0;
     string scenename;
     
     void Start()
     {
         scenename = SceneManager.GetActiveScene().name;
+        totalTime = timer;
+        totalTimeStatic = timer;
     }
 
     // Update is called once per frame
@@ -54,6 +58,10 @@ public class TimerCode : MonoBehaviour
     public float getTimerFloat()
     {
         return timer;
+    }
+    public static float getTimerLeftStatic()
+    {
+        return timerStatic;
     }
     public static string getTimerStatic()
     {
