@@ -13,12 +13,12 @@ public class StaticObjOrVar : MonoBehaviour
     [SerializeField] Canvas Menu;
     [SerializeField] TimerCode timer;
     [SerializeField] RectTransform movementRect;
+
     public static GameObject ICONBTN;
     int pageNum = 1;
     public bool InProcedure5 = false;
     public static GameObject selectedObj;
-    bool moveMenuBool = false;
-
+    int timerHave = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,7 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[7] = GameObject.Find("FinishLevel").GetComponent<Canvas>();//Finish a level
         ICONBTN = GameObject.Find("Procedure5Canvas/ICON");//ICON in Pro 5
         ICONBTN.SetActive(false);
-
+        timerHave = (int)timer.timer;
 
     }
     public void NextPage()
@@ -196,6 +196,9 @@ public class StaticObjOrVar : MonoBehaviour
             NewGameUI[x].enabled = false;
         }
         NewGameUI[7].enabled = true;
+        
+
+
         try
         {
             boxesController.resetVarInTime();
@@ -222,4 +225,5 @@ public class StaticObjOrVar : MonoBehaviour
             Debug.Log(movementRect.anchoredPosition);
         }
     }
+    
 }
