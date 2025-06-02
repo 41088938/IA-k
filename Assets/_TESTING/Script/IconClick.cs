@@ -19,7 +19,7 @@ public class IconClick : MonoBehaviour
     public void click()
     { 
 
-        ICONBTN.SetActive(true);
+        ICONBTN.transform.parent.gameObject.SetActive(true);
         ICONBTN.GetComponent<Image>().sprite = this.gameObject.GetComponent<Image>().sprite;
         
     }

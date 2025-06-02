@@ -30,8 +30,8 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[5] = GameObject.Find("Procedure5Canvas").GetComponent<Canvas>();//Procedure5,For wrong label/AWB/DGD
         NewGameUI[6] = GameObject.Find("ResultCheckList_Canvas").GetComponent<Canvas>();//checkList for each item after checking?
         NewGameUI[7] = GameObject.Find("FinishLevel").GetComponent<Canvas>();//Finish a level
-        ICONBTN = GameObject.Find("Procedure5Canvas/ICON");//ICON in Pro 5
-        ICONBTN.SetActive(false);
+        ICONBTN = GameObject.Find("Procedure5Canvas/ICON/Label_Icon");//ICON in Pro 5
+        ICONBTN.transform.parent.gameObject.SetActive(false);
         timerHave = (int)timer.timer;
 
     }
