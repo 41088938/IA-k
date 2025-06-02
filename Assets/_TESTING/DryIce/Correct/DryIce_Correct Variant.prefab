@@ -183,8 +183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  rotateAllowed: 0
   speed: 60
   inverted: 1
+  pause: 0
 --- !u!1 &1496251127768172378
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +248,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8463789917197823267, guid: 1722cded3833f2c49a19d24beef4b5ab, type: 3}
+  - {fileID: 2100000, guid: c6283f1fc6823481184743d3870f6b79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
