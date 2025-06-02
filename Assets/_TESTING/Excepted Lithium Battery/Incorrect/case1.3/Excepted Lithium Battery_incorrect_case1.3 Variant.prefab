@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5265558064501858721, guid: 124f3f299dc189847a15a8c41cbc4fe1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f674e09d630e49858630fa4a0a908f5, type: 2}
     - target: {fileID: 919132149155446097, guid: 124f3f299dc189847a15a8c41cbc4fe1, type: 3}
       propertyPath: m_Name
       value: Excepted Lithium Battery_incorrect_case1.3 Variant
@@ -152,5 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  rotateAllowed: 0
   speed: 60
   inverted: 1
+  pause: 0
