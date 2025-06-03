@@ -14,11 +14,14 @@ public class StaticObjOrVar : MonoBehaviour
     [SerializeField] TimerCode timer;
     [SerializeField] RectTransform movementRect;
 
+    [SerializeField] Button[] rejReasonBtns;
+
     public static GameObject ICONBTN;
     int pageNum = 1;
     public bool InProcedure5 = false;
     public static GameObject selectedObj;
     int timerHave = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -110,7 +113,7 @@ public class StaticObjOrVar : MonoBehaviour
         if (!InProcedure5)
         {
             NewGameUI[pageNum].enabled = false;
-            ProcedureIcons[pageNum-1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+            ProcedureIcons[pageNum - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
             NewGameUI[x].enabled = true;
             ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
             pageNum = x;
@@ -126,7 +129,7 @@ public class StaticObjOrVar : MonoBehaviour
                 ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
                 pageNum = x + 1;
             }
-            else if(pageNum == 5)
+            else if (pageNum == 5)
             {
                 NewGameUI[pageNum].enabled = false;
                 ProcedureIcons[pageNum - 2].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
@@ -144,6 +147,11 @@ public class StaticObjOrVar : MonoBehaviour
             }
         }
 
+        if (x == 1) {//check if on package check page and allow rotate obj
+            boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = false;
+        } else
+            boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = true;
+
     }
     public void NotAcceptBtn()
     {
@@ -152,6 +160,7 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[5].enabled = true;
         reasons[0].enabled = true;
         pageNum++;
+        resetRejReasonPanel();
     }
     public void AcceptBtn()
     {
@@ -168,10 +177,11 @@ public class StaticObjOrVar : MonoBehaviour
         }
     }
     public void packagebtn()
-    { 
+    {
         reasons[0].enabled = true;
         reasons[1].enabled = false;
         reasons[2].enabled = false;
+        
     }
     public void AWBbtn()
     {
@@ -184,6 +194,16 @@ public class StaticObjOrVar : MonoBehaviour
         reasons[0].enabled = false;
         reasons[1].enabled = false;
         reasons[2].enabled = true;
+    }
+
+    public void resetRejReasonPanel()
+    {
+        foreach (Button btns in rejReasonBtns)
+        {
+            btns.interactable = true;
+        }
+        rejReasonBtns[0].interactable = false;
+        packagebtn();
     }
     public void backMenu()
     {
