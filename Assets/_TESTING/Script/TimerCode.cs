@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TimerCode : MonoBehaviour
 {
+
+    public static TimerCode m_timercode;
     // Start is called before the first frame update
     [SerializeField]
     TMP_Text text;
@@ -15,9 +17,12 @@ public class TimerCode : MonoBehaviour
     public float totalTime = 0;
     static float totalTimeStatic = 0;
     string scenename;
-    
+
+    public GameObject timerCanvas;
+
     void Start()
     {
+        m_timercode = this;
         scenename = SceneManager.GetActiveScene().name;
         totalTime = timer;
         totalTimeStatic = timer;
@@ -38,7 +43,7 @@ public class TimerCode : MonoBehaviour
                 StaticObjOrVar.callFinish();
                 GameObject.Find("StopClick").GetComponent<BoxCollider>().enabled = true;
                 timerStop = true;
-                
+
             }
         }
         else if (!timerStop)
@@ -72,5 +77,15 @@ public class TimerCode : MonoBehaviour
     public void setTimerStop(bool s)
     {
         timerStop = s;
+    }
+
+    public void disableTimerCanvas()//disable timer display when display result panel
+    {
+        timerCanvas.SetActive(false);
+    }
+
+    public static void getDisableTimerCanvas()//for call my other static , disable timer display when display result panel
+    {
+        m_timercode.disableTimerCanvas();
     }
 }

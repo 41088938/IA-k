@@ -324,7 +324,7 @@ public class boxesController : MonoBehaviour
             bg.SetActive(false);
             getBox = false;
             StaticObjOrVar.NewGameUI[0].enabled = false;
-
+        
         if (HowManyBox == numberOfBox)
         {
             StaticObjOrVar.NewGameUI[7].enabled = true;
@@ -332,12 +332,15 @@ public class boxesController : MonoBehaviour
             StaticObjOrVar.NewGameUI[7].transform.GetChild(1).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+ (int)timerHolder.getTimerFloat();
             //FinishLevel/Score/Time
             StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+((int)timerHolder.getTimerFloat()*correctBox);
+            //set correct box text
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(4).transform.GetChild(2).GetComponent<TMP_Text>().text = "" + correctBox;
             int temp = PackageICON.transform.childCount;
             for (int x = 0; x < temp; x++)
             {
-                PackageICON.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform;
+                PackageICON.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(3).transform;
             }
-
+            timerHolder.disableTimerCanvas();//disable timer display when display result panel
+            
         }
     }
     public static void resetVarInTime()//for time trial, if no time
@@ -345,16 +348,22 @@ public class boxesController : MonoBehaviour
         //******************
         //Now only Time Trial, may not move with other
         //******************
+         TimerCode.getDisableTimerCanvas();//disable timer display when display result panel
+
         GameObject temp2 = GameObject.Find("GameCommonUINew/GameObject");
         StaticObjOrVar.NewGameUI[7].enabled = true;
-        StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "" + (int)TimerCode.getTimerLeftStatic();
+        //set time text
+        StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "" + "0";//(int)TimerCode.getTimerLeftStatic();
+        //set total score text, remain time * correct box
         StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = "" + ((int)TimerCode.getTimerLeftStatic() * correctboxstatic);
+        //set correct box text
+        StaticObjOrVar.NewGameUI[7].transform.GetChild(4).transform.GetChild(2).GetComponent<TMP_Text>().text = "" + correctboxstatic;
         int temp = temp2.transform.childCount;
         for (int x = 0; x < temp; x++)
         {
-            temp2.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform;
+            temp2.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(3).transform;
         }
-        
+       
 
     }
 

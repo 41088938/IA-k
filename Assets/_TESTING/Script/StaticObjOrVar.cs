@@ -196,14 +196,14 @@ public class StaticObjOrVar : MonoBehaviour
         reasons[2].enabled = true;
     }
 
-    public void resetRejReasonPanel()
+    public void resetRejReasonPanel()//reset rej reason "packing", "AWB","DGD" btns
     {
         foreach (Button btns in rejReasonBtns)
         {
             btns.interactable = true;
         }
         rejReasonBtns[0].interactable = false;
-        packagebtn();
+        packagebtn();//trigger default back to package reason list
     }
     public void backMenu()
     {
