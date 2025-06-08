@@ -44,6 +44,7 @@ public class MenuScript : MonoBehaviour
         this.gameObject.GetComponent<Canvas>().enabled = false;
         timer.setTimerStop(false);
         boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = false;
+        StaticObjOrVar.NewGameUI[0].enabled = true;
     }
     public void clickHowToPlay()
     { 
@@ -52,5 +53,7 @@ public class MenuScript : MonoBehaviour
     public void returnMenu()
     {
         this.gameObject.transform.transform.Find("HowToPlay").GetComponent<Canvas>().enabled = false;
+        
     }
+    
 }

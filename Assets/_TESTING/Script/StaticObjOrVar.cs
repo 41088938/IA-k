@@ -230,6 +230,9 @@ public class StaticObjOrVar : MonoBehaviour
     }
     public void openMenu()
     {
+        //To avoid people can click these when pausing
+        NewGameUI[0].enabled = false;
+        //
         Menu.enabled = true;
         timer.setTimerStop(true);
         boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = true;
@@ -242,7 +245,6 @@ public class StaticObjOrVar : MonoBehaviour
         {
             movementRect.anchoredPosition = Vector2.Lerp(movementRect.anchoredPosition, new Vector2(1, 0), 0.2f);
             yield return new WaitForSeconds(0.02f);
-            Debug.Log(movementRect.anchoredPosition);
         }
     }
     
