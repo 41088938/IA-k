@@ -125,8 +125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  rotateAllowed: 0
   speed: 60
   inverted: 1
+  pause: 0
 --- !u!114 &2893174213233207473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +175,4 @@ MonoBehaviour:
   - Missing Full name of City or Airport
   - "Incorrect \u201CDG Statement\u201D"
   - "Incorrect \u201CPSN\u201D"
+  DGInfo: {fileID: -1061794870, guid: 17291dae0ed0646119d58079b925fc87, type: 3}

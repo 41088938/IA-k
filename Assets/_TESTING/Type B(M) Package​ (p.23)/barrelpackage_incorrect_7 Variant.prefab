@@ -137,6 +137,7 @@ MonoBehaviour:
   - "Incorrect \u201CUN number\u201D"
   - "Missing the wording  \u201CCAO\u201D"
   - "Missing \u201DCAO\u201D Label on the opposite side"
+  DGInfo: {fileID: -1061794870, guid: 17291dae0ed0646119d58079b925fc87, type: 3}
 --- !u!65 &8796681444544850457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -171,5 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  rotateAllowed: 0
   speed: 60
   inverted: 1
+  pause: 0

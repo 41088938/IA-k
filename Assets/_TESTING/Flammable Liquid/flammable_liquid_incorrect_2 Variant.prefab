@@ -150,6 +150,7 @@ MonoBehaviour:
   - Missing Full name of City or Airport
   - "Missing \u201CDG statement\u201D"
   - "Incorrect \u201CType Code\u201D"
+  DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}
 --- !u!1 &5668964528760463805
 GameObject:
   m_ObjectHideFlags: 0

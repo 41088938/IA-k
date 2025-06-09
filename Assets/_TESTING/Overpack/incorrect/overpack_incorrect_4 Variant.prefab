@@ -194,8 +194,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  rotateAllowed: 0
   speed: 60
   inverted: 1
+  pause: 0
 --- !u!114 &4641351391569337172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,3 +250,4 @@ MonoBehaviour:
   - Incorrect Div 6.1 Hazard Label
   - "Incorrect the \u201CProper Shipping Name\u201D"
   - Not Required to have UN packaging
+  DGInfo: {fileID: 201912937, guid: d7177f6d8c77945ffaf8b85a90beee0a, type: 3}

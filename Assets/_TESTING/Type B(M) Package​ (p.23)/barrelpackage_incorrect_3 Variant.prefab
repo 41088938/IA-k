@@ -125,8 +125,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  rotateAllowed: 0
   speed: 60
   inverted: 1
+  pause: 0
 --- !u!114 &443775448388884129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +175,4 @@ MonoBehaviour:
   - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D"
   - "Missing the wording  \u201CCAO\u201D"
   - "Missing \u201CTrefoil\u201D Symbol"
+  DGInfo: {fileID: -1061794870, guid: 17291dae0ed0646119d58079b925fc87, type: 3}

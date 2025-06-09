@@ -148,6 +148,7 @@ MonoBehaviour:
   ans:
   - Missing the "Net Quantity weight of Dry Ice"
   - Incorrect usage of "DG statement" / Need to be removed
+  DGInfo: {fileID: 1352302181, guid: cb985cd7303f94d8a92c383963ef8673, type: 3}
 --- !u!114 &1478754001053249734
 MonoBehaviour:
   m_ObjectHideFlags: 0

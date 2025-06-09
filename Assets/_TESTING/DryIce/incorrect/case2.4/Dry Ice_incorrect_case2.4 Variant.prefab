@@ -148,6 +148,7 @@ MonoBehaviour:
   ans:
   - Missing the "Proper Shipping Name"
   - Missing the "Proper Shipping Name"
+  DGInfo: {fileID: 1352302181, guid: cb985cd7303f94d8a92c383963ef8673, type: 3}
 --- !u!114 &2977298905582158091
 MonoBehaviour:
   m_ObjectHideFlags: 0

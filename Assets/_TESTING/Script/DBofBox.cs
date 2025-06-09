@@ -18,6 +18,8 @@ public class DBofBox : MonoBehaviour
     GameObject optiontext;
     [SerializeField]
     string[] ans;
+    [SerializeField]
+    Sprite DGInfo;
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +34,10 @@ public class DBofBox : MonoBehaviour
         
     }
     public void callImage()
-    { 
+    {
         GameObject.Find("Procedure2Canvas/AWBDA/AWB_ScrollRect/Image").GetComponent<Image>().sprite = Airwaybill;
         GameObject.Find("Procedure3Canvas/DGDDG/DGDDA/DGD_ScrollRect/Image").GetComponent<Image>().sprite = DGD;
+        GameObject.Find("------------------Manager/DG_Info_Panel").GetComponent<DG_Info_Panel_Manager>().setImg(DGInfo);
     }
 
     public void callOption()

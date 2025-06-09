@@ -138,6 +138,7 @@ MonoBehaviour:
   - Non, there is no DGD
   ans:
   - Incorrect placement of the "shipper and consignee Mark"
+  DGInfo: {fileID: 870412924, guid: 7515fe4fe547d41c9846ea30561d0c28, type: 3}
 --- !u!114 &6425031128329648032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,5 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actions: {fileID: -944628639613478452, guid: d36e7af3058f8d14790a604934dadb8f, type: 3}
+  rotateAllowed: 0
   speed: 60
   inverted: 1
+  pause: 0

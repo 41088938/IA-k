@@ -241,3 +241,4 @@ MonoBehaviour:
   - Missing Full name of City or Airport
   - "Incorrect \u201CDG Statement\u201D"
   - "Missing the word \u201CUN\u201D"
+  DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}

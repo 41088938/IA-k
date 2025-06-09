@@ -240,3 +240,4 @@ MonoBehaviour:
   - "Incorrect \u201CPacking Instruction\u201D"
   - "Incorrect \u201CDG Statement\u201D"
   - "Incorrect the \u201CProper Shipping Name\u201D"
+  DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}
