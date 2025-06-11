@@ -113,11 +113,11 @@ public class ResultCheckList : MonoBehaviour
 
 
         GameObject newObj = GameObject.Instantiate(_tickItem);
-        newObj.transform.SetParent(_contentArea.transform);
+        newObj.transform.SetParent(_leftPos.transform);
         newObj.transform.localScale = Vector3.one;
         //newObj.transform.localPosition = _leftPos.transform.localPosition;
-        newObj.GetComponent<RectTransform>().localPosition = _leftPos.GetComponent<RectTransform>().localPosition;
-        newObj.GetComponent<RectTransform>().localScale = new Vector3(1.1f, 1.1f, 1.1f);
+            //newObj.GetComponent<RectTransform>().localPosition = _leftPos.GetComponent<RectTransform>().localPosition;
+            // newObj.GetComponent<RectTransform>().localScale = new Vector3(1.1f, 1.1f, 1.1f);
         //newObj.GetComponent<RectTransform>().sizeDelta = new Vector2(175, 100);
         newObj.name = newObj.name + "(key: " + _str + ")";
 
@@ -145,11 +145,11 @@ public class ResultCheckList : MonoBehaviour
         if (find != null) return;
 
         GameObject newObj = GameObject.Instantiate(_crossItem);
-        newObj.transform.SetParent(_contentArea.transform);
+        newObj.transform.SetParent(_rightPos.transform);
         newObj.transform.localScale = Vector3.one;
         //newObj.transform.localPosition = _rightPos.transform.localPosition;
-        newObj.GetComponent<RectTransform>().localPosition = _rightPos.GetComponent<RectTransform>().localPosition;
-        newObj.GetComponent<RectTransform>().localScale = new Vector3(1.1f, 1.1f, 1.1f);
+             //newObj.GetComponent<RectTransform>().localPosition = _rightPos.GetComponent<RectTransform>().localPosition;
+            //newObj.GetComponent<RectTransform>().localScale = new Vector3(1.1f, 1.1f, 1.1f);
         //newObj.GetComponent<RectTransform>().sizeDelta =new Vector2(175,100);
         newObj.name = newObj.name + "(key: " + _str + ")";
 
