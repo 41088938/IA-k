@@ -20,14 +20,26 @@ public class DBofBox : MonoBehaviour
     string[] ans;
     [SerializeField]
     Sprite DGInfo;
-
+    private static System.Random rng = new System.Random();
     // Start is called before the first frame update
     void Start()
     {
         optiontext = Resources.Load<GameObject>("OptionsText");
-
     }
 
+
+
+    public static void Shuffle<T>(T[] array)
+    {
+        int n = array.Length;
+        while (n > 1)
+        {
+            int k = rng.Next(n--);
+            T temp = array[n];
+            array[n] = array[k];
+            array[k] = temp;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -47,7 +59,9 @@ public class DBofBox : MonoBehaviour
         {
             Destroy(gos[x]);
         }
-
+        Shuffle(AWBoption);
+        Shuffle(Dgdoption);
+        Shuffle(Packageoption);
         for (int x = 0; x < AWBoption.Length; x++)
         {
             GameObject go = Instantiate(optiontext,GameObject.Find("Procedure5Canvas/AWBCanvas/Scroll View/Viewport/Content").transform);

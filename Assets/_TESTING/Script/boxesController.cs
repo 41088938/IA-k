@@ -253,11 +253,66 @@ public class boxesController : MonoBehaviour
                         {
                             resultCheckList.AddTickItem(Choose[y]);
                             ans[x] = null;
+                            Choose[y] = null;
                             temp++;
                             break;
                         }
                     }
                 }
+                if (temp == ans.Length && checkAllNull(Choose))
+                {
+                    if (ClickedBox.transform.name.Contains("barrel"))
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_O");
+                    else
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
+                    correctBox++;
+                    correctboxstatic++;
+                }
+                else if (!checkAllNull(ans))
+                {
+                    resultCheckList.AddCrossItem("You are missing these error:");
+                    for (int x = 0; x < ans.Length; x++)
+                    {
+                        if (ans[x] != null)
+                        {
+                            resultCheckList.AddCrossItem(ans[x]);
+                        }
+                    }
+                    resultCheckList.AddCrossItem("You choose these wrong answers:");
+                    if (!checkAllNull(Choose))
+                    {
+                        for (int x = 0; x < Choose.Length; x++)
+                        {
+                            if (Choose[x] != null)
+                            {
+                                resultCheckList.AddCrossItem(Choose[x]);
+                            }
+                        }
+                    }
+                    if (ClickedBox.transform.name.Contains("barrel"))
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
+                    else
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
+                }
+                else if (!checkAllNull(Choose))
+                {
+                    resultCheckList.AddCrossItem("You choose these wrong answers:");
+                    if (!checkAllNull(Choose))
+                    {
+                        for (int x = 0; x < Choose.Length; x++)
+                        {
+                            if (Choose[x] != null)
+                            {
+                                resultCheckList.AddCrossItem(Choose[x]);
+                            }
+                        }
+                    }
+                    if (ClickedBox.transform.name.Contains("barrel"))
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
+                    else
+                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
+                }
+                /*
                 if (temp == ans.Length)
                 {
                     if (ClickedBox.transform.name.Contains("barrel"))
@@ -267,7 +322,7 @@ public class boxesController : MonoBehaviour
                     correctBox++;
                     correctboxstatic++;
                 }
-                else
+                else if (temp < ans.Length)
                 {
                     resultCheckList.AddCrossItem("You are missing these error:");
                     for (int x = 0; x < ans.Length; x++)
@@ -283,8 +338,13 @@ public class boxesController : MonoBehaviour
                     else
                         icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
                 }
-
+                else if
+                { 
+                    
+                }
+                               */
             }
+
         }
         else
         {
@@ -315,7 +375,7 @@ public class boxesController : MonoBehaviour
     public void resetVar()
     {
         //******************
-        //Now only Time Trial, may not move with other
+        //Now only Time Trial, may not work with other
         //******************
             StaticObjOrVar.NewGameUI[5].enabled = false;
             resultCheckList.RemoveAll();
@@ -346,7 +406,7 @@ public class boxesController : MonoBehaviour
     public static void resetVarInTime()//for time trial, if no time
     {
         //******************
-        //Now only Time Trial, may not move with other
+        //Now only Time Trial, may not work with other
         //******************
          TimerCode.getDisableTimerCanvas();//disable timer display when display result panel
 
@@ -366,5 +426,13 @@ public class boxesController : MonoBehaviour
        
 
     }
-
+    bool checkAllNull(string[] checkObj)
+    {
+        for (int x = 0; x < checkObj.Length; x++)
+        {
+            if (checkObj != null)
+                return false;
+        }
+        return true;
+    }
 }

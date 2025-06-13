@@ -136,10 +136,10 @@ MonoBehaviour:
   - Missing Lithium metal batteries Section II statement.
   Packageoption:
   - Incorrect placement of the "shipper and consignee Mark"
-  - Missing "UN Number"
+  - Missing "UN Number" in Package
   - Incorrect usage of lithium or sodium ion battery label
   Dgdoption:
-  - Non, there is no DGD
+  - NAN, there is no DGD
   ans:
   - Incorrect Lithium metal batteries Section II statement.
   - Incorrect usage of lithium or sodium ion battery label

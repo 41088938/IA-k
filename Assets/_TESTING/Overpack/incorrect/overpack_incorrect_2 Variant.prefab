@@ -166,8 +166,8 @@ MonoBehaviour:
   - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D"
   - "Missing \u201CCargo Aircraft Only\u201D or \u201CCAO\u201D"
   Packageoption:
-  - "Missing the word \u201CUN\u201D"
-  - "Incorrect \u201CUN number\u201D"
+  - "Missing the word \u201CUN\u201D in Package"
+  - "Incorrect \u201CUN number\u201D in Package"
   - Missing the net quantity
   - Missing Div 5.1 Hazard Label
   - Not Required to have UN packaging
@@ -176,7 +176,7 @@ MonoBehaviour:
   - "Improper affix of the \u201COrientation Label\u201D"
   - Missing CAO Handling Label
   - Incorrect Div 6.1 Hazard Label
-  - "Incorrect the \u201CProper Shipping Name\u201D"
+  - "Incorrect \u201CProper Shipping Name\u201D in Package"
   - Not Required to have UN packaging
   Dgdoption:
   - Missing Page Number
@@ -184,17 +184,18 @@ MonoBehaviour:
   - Missing Full name of City or Airport
   - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D"
   - "Missing the word \u201COverpack used\u201D"
-  - "Incorrect \u201CUN number\u201D"
+  - "Incorrect \u201CUN number\u201D in DGD"
   - "Incorrect \u201CClass or Division\u201D"
   - Missing Subsidiary Hazard
-  - "Incorrect \u201CProper Shipping Name\u201D"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
   - "Missing \u201C24hr Emergency contact number\u201D"
   - "Incorrect \u201CPacking Group\u201D"
   - "Missing \u201CSignature\u201D"
   - "Incorrect \u201CPacking Instruction\u201D"
+  - Missing the word "UN" in DGD
   ans:
   - Missing Full name of City or Airport
-  - "Incorrect \u201CUN number\u201D"
+  - "Incorrect \u201CUN number\u201D in DGD"
   - "Incorrect \u201CClass or Division\u201D"
   - Missing Subsidiary Hazard
   - "Missing \u201CCargo Aircraft Only\u201D or \u201CCAO\u201D"
