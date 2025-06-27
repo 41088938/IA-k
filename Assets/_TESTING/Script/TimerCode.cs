@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TimerCode : MonoBehaviour
 {
 
-    public static TimerCode m_timercode;
+    public static TimerCode m_timercode=null;
     // Start is called before the first frame update
     [SerializeField]
     TMP_Text text;
@@ -87,5 +87,9 @@ public class TimerCode : MonoBehaviour
     public static void getDisableTimerCanvas()//for call my other static , disable timer display when display result panel
     {
         m_timercode.disableTimerCanvas();
+    }
+    public static TimerCode hi()
+    { 
+        return m_timercode;
     }
 }

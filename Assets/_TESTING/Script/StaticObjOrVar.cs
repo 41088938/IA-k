@@ -167,6 +167,7 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[pageNum].enabled = false;
         NewGameUI[6].enabled = true;
         boxescontroller.checkAns();
+        NewGameUI[0].transform.Find("Steps").GetComponent<CanvasGroup>().interactable = false;
         ProcedureIcons[0].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
         ProcedureIcons[3].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
         InProcedure5 = false;
@@ -216,12 +217,10 @@ public class StaticObjOrVar : MonoBehaviour
             NewGameUI[x].enabled = false;
         }
         NewGameUI[7].enabled = true;
-        
-
 
         try
         {
-            boxesController.resetVarInTime();
+            boxesController.getController().resetVar();
         }
         catch (Exception e)
         { 

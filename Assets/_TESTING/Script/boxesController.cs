@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
@@ -30,15 +31,19 @@ public class boxesController : MonoBehaviour
     GameObject[] prefebs;
     //var
     public int correctBox = 0;
+    public int baseScore = 20;
     GameObject[] pointsWithRand;
     public bool getBox = false;
     int numberOfBox = 0;
     public int HowManyBox = 0;
     static int correctboxstatic = 0;
+    static boxesController controller = null;
     UnityEngine.InputSystem.Mouse mouse;
+
     // Start is called before the first frame update
     void Start()
     {
+        controller = this;
         points = GameObject.FindGameObjectsWithTag("point");
         bg.SetActive(false);
         maincam = GameObject.Find("Main Camera").GetComponent<Camera>();
@@ -140,6 +145,7 @@ public class boxesController : MonoBehaviour
     {
         StaticObjOrVar.NewGameUI[0].enabled = true;
         StaticObjOrVar.NewGameUI[1].enabled = true;
+        StaticObjOrVar.NewGameUI[0].transform.Find("Steps").GetComponent<CanvasGroup>().interactable = true;
         bg.SetActive(true);
         getBox = true;
         ClickedBox.transform.position = BoxPoint.transform.position;
@@ -237,7 +243,7 @@ public class boxesController : MonoBehaviour
             int temp = 0;
             if (ans[0] == "correct")
             {
-                resultCheckList.AddCrossItem("It has no error!");
+                resultCheckList.AddCrossItem("It has no error!",true);
                 if(ClickedBox.transform.name.Contains("barrel"))
                     icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
                 else
@@ -270,22 +276,22 @@ public class boxesController : MonoBehaviour
                 }
                 else if (!checkAllNull(ans))
                 {
-                    resultCheckList.AddCrossItem("You are missing these error:");
+                    resultCheckList.AddCrossItem("You are missing these error:",false);
                     for (int x = 0; x < ans.Length; x++)
                     {
                         if (ans[x] != null)
                         {
-                            resultCheckList.AddCrossItem(ans[x]);
+                            resultCheckList.AddCrossItem(ans[x], true);
                         }
                     }
-                    resultCheckList.AddCrossItem("You choose these wrong answers:");
+                    resultCheckList.AddCrossItem("You choose these wrong answers:", false);
                     if (!checkAllNull(Choose))
                     {
                         for (int x = 0; x < Choose.Length; x++)
                         {
                             if (Choose[x] != null)
                             {
-                                resultCheckList.AddCrossItem(Choose[x]);
+                                resultCheckList.AddCrossItem(Choose[x],true);
                             }
                         }
                     }
@@ -296,14 +302,14 @@ public class boxesController : MonoBehaviour
                 }
                 else if (!checkAllNull(Choose))
                 {
-                    resultCheckList.AddCrossItem("You choose these wrong answers:");
+                    resultCheckList.AddCrossItem("You choose these wrong answers:", false);
                     if (!checkAllNull(Choose))
                     {
                         for (int x = 0; x < Choose.Length; x++)
                         {
                             if (Choose[x] != null)
                             {
-                                resultCheckList.AddCrossItem(Choose[x]);
+                                resultCheckList.AddCrossItem(Choose[x],true);
                             }
                         }
                     }
@@ -362,7 +368,7 @@ public class boxesController : MonoBehaviour
             {
                 for (int x = 0; x < ans.Length; x++)
                 {
-                    resultCheckList.AddCrossItem(ans[x]);
+                    resultCheckList.AddCrossItem(ans[x],true);
                 }
                 if (ClickedBox.transform.name.Contains("barrel"))
                     icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
@@ -377,6 +383,7 @@ public class boxesController : MonoBehaviour
         //******************
         //Now only Time Trial, may not work with other
         //******************
+        Debug.Log(correctBox + " " + timerHolder.getTimerFloat());
             StaticObjOrVar.NewGameUI[5].enabled = false;
             resultCheckList.RemoveAll();
             resultCheckList.GetComponentInParent<Canvas>().enabled = false;
@@ -385,13 +392,13 @@ public class boxesController : MonoBehaviour
             getBox = false;
             StaticObjOrVar.NewGameUI[0].enabled = false;
         
-        if (HowManyBox == numberOfBox)
+        if (HowManyBox == numberOfBox|| timerHolder.getTimerFloat()<=0)
         {
             StaticObjOrVar.NewGameUI[7].enabled = true;
             //FinishLevel/TotalTime/Time
             StaticObjOrVar.NewGameUI[7].transform.GetChild(1).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+ (int)timerHolder.getTimerFloat();
             //FinishLevel/Score/Time
-            StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+((int)timerHolder.getTimerFloat()*correctBox);
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+((int)timerHolder.getTimerFloat()+ baseScore*correctBox);
             //set correct box text
             StaticObjOrVar.NewGameUI[7].transform.GetChild(4).transform.GetChild(2).GetComponent<TMP_Text>().text = "" + correctBox;
             int temp = PackageICON.transform.childCount;
@@ -434,5 +441,9 @@ public class boxesController : MonoBehaviour
                 return false;
         }
         return true;
+    }
+    public static boxesController getController()
+    {
+        return controller;
     }
 }

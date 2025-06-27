@@ -48,7 +48,7 @@ public class ResultCheckList : MonoBehaviour
     [ContextMenu("Add Debug Cross Item")]
     private void AddDebugCrossItem()
     {
-        AddCrossItem("Debug Debug Debug Debug");
+        AddCrossItem("Debug Debug Debug Debug",true);
     }
 #endif
 
@@ -100,7 +100,7 @@ public class ResultCheckList : MonoBehaviour
 
     static public void AddCrossItemToCheckList(string _str)
     {
-        m_resultCheckList.AddCrossItem(_str);
+        m_resultCheckList.AddCrossItem(_str,true);
     }
 
     public void AddTickItem(string _str)
@@ -136,7 +136,7 @@ public class ResultCheckList : MonoBehaviour
         ResizeTheContentArea();
     }
 
-    public void AddCrossItem(string _str)
+    public void AddCrossItem(string _str,bool isPic)
     {
         GameObject find = crossItems.Find((obj) =>
         {
@@ -145,6 +145,7 @@ public class ResultCheckList : MonoBehaviour
         if (find != null) return;
 
         GameObject newObj = GameObject.Instantiate(_crossItem);
+        newObj.transform.Find("Image").gameObject.SetActive(isPic);
         newObj.transform.SetParent(_rightPos.transform);
         newObj.transform.localScale = Vector3.one;
         //newObj.transform.localPosition = _rightPos.transform.localPosition;
