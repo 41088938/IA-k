@@ -19,7 +19,7 @@ public class HomePageManuel : MonoBehaviour
     }
     public void StartButton()
     {
-        SceneManager.LoadScene("opeing2");
+        SceneManager.LoadScene("TimeTrial");
     }
     public void OptionButton()
     {
