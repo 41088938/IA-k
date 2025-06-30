@@ -14,22 +14,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Demo/GameScene_tester.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene_tester_non_old.unity
     guid: 095b26e41f4656149897857dce38fd3f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/opeing2.unity
     guid: 06bf49ff133ae1c40a4d9e345f34a39a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/lv.unity
     guid: 7ea44da661058324b9ebab32e6ccfb9b
-  - enabled: 1
+  - enabled: 0
     path: Assets/_TESTING/Scene/GameScene_tester_non.unity
     guid: 26ab96e2c279da94da21d26e24117b7f
-  - enabled: 1
+  - enabled: 0
     path: Assets/_TESTING/Scene/Advance_Level.unity
     guid: 5a0230ff10b1abb4e9ca1d4a4d8fbb60
-  - enabled: 1
+  - enabled: 0
     path: Assets/_TESTING/Scene/Intermediate_Level.unity
     guid: d6d8c98b9a80cc743b0d5d7b0f2a064b
   - enabled: 1
