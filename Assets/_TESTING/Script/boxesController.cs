@@ -276,7 +276,7 @@ public class boxesController : MonoBehaviour
                 }
                 else if (!checkAllNull(ans))
                 {
-                    resultCheckList.AddCrossItem("You are missing these error:",false);
+                    resultCheckList.AddCrossItem("<color=#CBB498>You are missing these error:</color>",false);
                     for (int x = 0; x < ans.Length; x++)
                     {
                         if (ans[x] != null)
@@ -284,7 +284,7 @@ public class boxesController : MonoBehaviour
                             resultCheckList.AddCrossItem(ans[x], true);
                         }
                     }
-                    resultCheckList.AddCrossItem("You choose these wrong answers:", false);
+                    resultCheckList.AddCrossItem("<color=#CBB498>You choose these wrong answers:</color>", false);
                     if (!checkAllNull(Choose))
                     {
                         for (int x = 0; x < Choose.Length; x++)
