@@ -29,6 +29,7 @@ public class boxesController : MonoBehaviour
     Camera maincam;
     [SerializeField]
     GameObject[] prefebs;
+    [SerializeField] CanvasGroup Steps;
     //var
     public int correctBox = 0;
     public int baseScore = 20;
@@ -143,6 +144,7 @@ public class boxesController : MonoBehaviour
     }
     public void BoxClick()
     {
+        Steps.interactable = true;
         StaticObjOrVar.NewGameUI[0].enabled = true;
         StaticObjOrVar.NewGameUI[1].enabled = true;
         StaticObjOrVar.NewGameUI[0].transform.Find("Steps").GetComponent<CanvasGroup>().interactable = true;
