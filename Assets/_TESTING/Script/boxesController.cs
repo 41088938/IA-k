@@ -27,10 +27,15 @@ public class boxesController : MonoBehaviour
     [SerializeField] StaticObjOrVar staticHolder;
     [SerializeField] ResultCheckList resultCheckList;
     Camera maincam;
-    [SerializeField]
-    GameObject[] prefebs;
+    //[SerializeField]GameObject[] prefebs;
     [SerializeField] CanvasGroup Steps;
+    [SerializeField] GameObject[] Flammable;
+    [SerializeField] GameObject[] DryIce;
+    [SerializeField] GameObject[] TypeBM;
+    [SerializeField] GameObject[] battery;
+    [SerializeField] GameObject[] overpack;
     //var
+    ArrayList gameObjects;
     public int correctBox = 0;
     public int baseScore = 20;
     GameObject[] pointsWithRand;
@@ -40,10 +45,17 @@ public class boxesController : MonoBehaviour
     static int correctboxstatic = 0;
     static boxesController controller = null;
     UnityEngine.InputSystem.Mouse mouse;
+    int adder = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameObjects = new ArrayList();
+        gameObjects.Add(Flammable);
+        gameObjects.Add (DryIce); 
+        gameObjects.Add(TypeBM);
+        gameObjects.Add(overpack);
+        gameObjects.Add(battery);
         controller = this;
         points = GameObject.FindGameObjectsWithTag("point");
         bg.SetActive(false);
@@ -66,8 +78,8 @@ public class boxesController : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TimeTrial")
         {
-            numberOfBox = 4;
-            icons = new Image[4];
+            numberOfBox = 5;
+            icons = new Image[5];
         }
         //
         pointsWithRand = new GameObject[numberOfBox];
@@ -78,26 +90,27 @@ public class boxesController : MonoBehaviour
             points = RemoveAt(points, ran);
         }
 
-        for(int x = 0; x<pointsWithRand.Length;x++)
+        foreach(GameObject[] objs in gameObjects)
         {
             GameObject clone;
-            int ran = UnityEngine.Random.Range(0, prefebs.Length);
-            clone = Instantiate(prefebs[ran],new Vector3(0,0,0), new Quaternion(0,0,0,0));
-            clone = Instantiate(prefebs[ran], new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
+            int ran = UnityEngine.Random.Range(0, objs.Length);
+            clone = Instantiate(objs[ran],new Vector3(0,0,0), new Quaternion(0,0,0,0));
+            clone = Instantiate(objs[ran], new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
             clone.transform.parent = GameObject.Find("van/RandomBoxes").transform;
-            clone.transform.position =  pointsWithRand[x].transform.position;
-            if (prefebs[ran].transform.name.Contains("flammable"))
+            clone.transform.position =  pointsWithRand[adder].transform.position;
+            if (objs[ran].transform.name.Contains("flammable"))
             clone.transform.Rotate(0, 180, 0);
-            else if (prefebs[ran].transform.name.Contains("barrelpackage"))
+            else if (objs[ran].transform.name.Contains("barrelpackage"))
                 clone.transform.Rotate(-90, 0, 0);
             else
                 clone.transform.Rotate(0, 90, 0);
-            if (prefebs[ran].transform.name.Contains("barrelpackage"))
+            if (objs[ran].transform.name.Contains("barrelpackage"))
                 clone.transform.Translate(0,0, 0.35f);
             GameObject go = Instantiate(Resources.Load<GameObject>("OX/packageICON"));
             go.transform.parent = PackageICON.transform;
-            go.transform.name = "icon" + x;
-            icons[x] = go.GetComponent<Image>();
+            go.transform.name = "icon" + adder;
+            icons[adder] = go.GetComponent<Image>();
+            adder++;
         }
         StaticObjOrVar.NewGameUI[0].enabled = false;
         //Debug.Log(Boxes.Length);
