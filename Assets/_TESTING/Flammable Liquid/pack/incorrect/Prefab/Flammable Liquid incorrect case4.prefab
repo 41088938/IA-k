@@ -64,6 +64,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6319091506081472516, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3832751957706949365, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 951655a8caae9f740bf6e4db3c662357, type: 2}
     - target: {fileID: 49549934688856624, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -86,8 +94,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
       propertyPath: m_Name
-      value: Flammable Liquid Correct Variant
+      value: Flammable Liquid incorrect 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6877476350376008592, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 035ecb7a50953064390e5000a76356ba, type: 2}
     - target: {fileID: 8563229988257885105, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -167,12 +179,14 @@ MonoBehaviour:
   - Incorrect usage of "DG statement"
   - Missing "DG statement"
   Packageoption:
+  - "Missing additional \u201COrientation Label\u201D on the opposite side"
   - "Missing the word \u201CUN\u201D"
-  - "Incorrect \u201CUN number\u201D"
   - "Incorrect \u201CType Code\u201D"
+  - "Incorrect \u201CUN number\u201D"
+  - "Missing additional \u201COrientation Label\u201D on the opposite side"
   Dgdoption:
-  - Missing Page Number
-  - Missing Full name of City or Airport
+  - '-'
+  - '-'
   ans:
-  - correct
+  - '-'
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}
