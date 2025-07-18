@@ -171,20 +171,20 @@ MonoBehaviour:
   - Incorrect usage of "DG statement"
   - Missing "DG statement"
   Packageoption:
-  - "Incorrect the \u201CProper Shipping Name\u201D"
-  - "Incorrect \u201CUN number\u201D"
-  - "Incorrect \u201CType Code\u201D"
+  - "Incorrect the \u201CProper Shipping Name\u201D in Package"
+  - "Incorrect \u201CUN number\u201D in Package"
+  - "Incorrect \u201CType Code\u201D in Package"
   Dgdoption:
-  - "Missing the word \u201CUN\u201D"
-  - "Incorrect \u201CPacking Instruction\u201D"
-  - Missing Page Number
-  - "Incorrect \u201CClass or Division\u201D"
-  - "Incorrect \u201CProper Shipping Name\u201D"
-  - "Incorrect \u201CUN number\u201D"
+  - "Missing the word \u201CUN\u201D in DGD"
+  - "Incorrect \u201CPacking Instruction\u201D in DGD"
+  - Missing Page Number in DGD
+  - "Incorrect \u201CClass or Division\u201D in DGD"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
+  - "Incorrect \u201CUN number\u201D in DGD"
   ans:
-  - "Incorrect \u201CUN number\u201D"
-  - "Incorrect the \u201CProper Shipping Name\u201D"
+  - "Incorrect \u201CUN number\u201D in Package"
+  - "Incorrect the \u201CProper Shipping Name\u201D in Package"
   - "Missing \u201CDG statement\u201D"
-  - "Missing the word \u201CUN\u201D"
-  - "Incorrect \u201CPacking Instruction\u201D"
+  - "Missing the word \u201CUN\u201D in DGD"
+  - "Incorrect \u201CPacking Instruction\u201D in DGD"
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}

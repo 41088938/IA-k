@@ -138,7 +138,7 @@ MonoBehaviour:
   - Incorrect "UN number" in Airway Bill
   Packageoption:
   - Missing the "Net Quantity weight of Dry Ice"
-  - Incorrext Hazard Label
+  - Incorrect Hazard Label
   - Incorrect placement of the "shipper and consignee Mark"
   - Missing the "Proper Shipping Name" in Package
   - Missing the word "UN" in Package
@@ -146,7 +146,7 @@ MonoBehaviour:
   Dgdoption:
   - NAN, there is no DGD
   ans:
-  - Incorrext Hazard Label
+  - Incorrect Hazard Label
   - Missing the "Net Quantity weight of Dry Ice"
   - Missing the word "UN" in Airway Bill
   DGInfo: {fileID: 1352302181, guid: cb985cd7303f94d8a92c383963ef8673, type: 3}

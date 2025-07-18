@@ -179,20 +179,19 @@ MonoBehaviour:
   - Incorrect usage of "DG statement"
   - Missing "DG statement"
   Packageoption:
-  - "Missing additional \u201COrientation Label\u201D on the opposite side"
-  - "Missing the word \u201CUN\u201D"
-  - "Incorrect \u201CType Code\u201D"
-  - "Incorrect \u201CUN number\u201D"
-  - "Missing additional \u201COrientation Label\u201D on the opposite side"
+  - "Missing additional \u201COrientation Label\u201D on the opposite side in Package"
+  - "Missing the word \u201CUN\u201D in Package"
+  - "Incorrect \u201CType Code\u201D in Package"
+  - "Incorrect \u201CUN number\u201D in Package"
   Dgdoption:
-  - "Incorrect \u201CUN number\u201D"
-  - "Incorrect \u201CProper Shipping Name\u201D"
-  - Missing Full name of City or Airport
+  - "Incorrect \u201CUN number\u201D in DGD"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
+  - Missing Full name of City or Airport in DGD
   ans:
-  - "Missing additional \u201COrientation Label\u201D on the opposite side"
-  - "Missing the word \u201CUN\u201D"
-  - "Incorrect \u201CType Code\u201D"
+  - "Missing additional \u201COrientation Label\u201D on the opposite side in Package"
+  - "Missing the word \u201CUN\u201D in Package"
+  - "Incorrect \u201CType Code\u201D in Package"
   - Missing "DG statement"
-  - "Incorrect \u201CUN number\u201D"
-  - "Incorrect \u201CProper Shipping Name\u201D"
+  - "Incorrect \u201CUN number\u201D in DGD"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}

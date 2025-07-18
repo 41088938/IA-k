@@ -175,9 +175,9 @@ MonoBehaviour:
   - Incorrect usage of "DG statement"
   - Missing "DG statement"
   Packageoption:
-  - " Incorrect \u201CUN number\u201D"
-  - "Incorrect \u201CType Code\u201D"
-  - "Incorrect the \u201CProper Shipping Name\u201D"
+  - " Incorrect \u201CUN number\u201D in Package"
+  - "Incorrect \u201CType Code\u201D in Package"
+  - "Incorrect the \u201CProper Shipping Name\u201D in Package"
   Dgdoption:
   - 'Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft
     type '
@@ -185,8 +185,8 @@ MonoBehaviour:
   - "Missing \u201CSignature\u201D "
   - "Incorrect \u201CPacking Group\u201D "
   ans:
-  - "Incorrect \u201CType Code\u201D"
-  - "Incorrect \u201CType Code\u201D,Incorrect \u201CUN number\u201D"
+  - "Incorrect \u201CType Code\u201D in Package"
+  - "Incorrect \u201CUN number\u201D in Package"
   - 'Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft
     type '
   - Missing Full name of City or Airport
