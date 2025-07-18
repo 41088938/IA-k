@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Airwaybill: {fileID: 21300000, guid: 133fddeab982543f4a9c3034b951d011, type: 3}
-  DGD: {fileID: 21300000, guid: f360f0c91c619034eadf7884e624c60a, type: 3}
+  Airwaybill: {fileID: 21300000, guid: b163903af14ab48c2bd80fd4f26a2fd9, type: 3}
+  DGD: {fileID: 21300000, guid: 1dd374dd5a3532b4aa3ee1244cbbc64e, type: 3}
   AWBoption:
   - Incorrect usage of "DG statement"
   - Missing "DG statement"
@@ -175,9 +175,16 @@ MonoBehaviour:
   - "Incorrect \u201CUN number\u201D"
   - "Incorrect \u201CType Code\u201D"
   Dgdoption:
-  - '-'
-  - '-'
+  - "Missing the word \u201CUN\u201D"
+  - "Incorrect \u201CPacking Instruction\u201D"
+  - Missing Page Number
+  - "Incorrect \u201CClass or Division\u201D"
+  - "Incorrect \u201CProper Shipping Name\u201D"
+  - "Incorrect \u201CUN number\u201D"
   ans:
   - "Incorrect \u201CUN number\u201D"
   - "Incorrect the \u201CProper Shipping Name\u201D"
+  - "Missing \u201CDG statement\u201D"
+  - "Missing the word \u201CUN\u201D"
+  - "Incorrect \u201CPacking Instruction\u201D"
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}
