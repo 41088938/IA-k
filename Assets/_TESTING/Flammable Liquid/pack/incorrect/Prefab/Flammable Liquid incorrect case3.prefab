@@ -178,5 +178,6 @@ MonoBehaviour:
   - '-'
   - '-'
   ans:
-  - '-'
+  - "Incorrect \u201CUN number\u201D"
+  - "Incorrect the \u201CProper Shipping Name\u201D"
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}
