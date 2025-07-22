@@ -86,8 +86,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
       propertyPath: m_Name
-      value: Flammable Liquid Correct Variant
+      value: Flammable Liquid incorrect case3
       objectReference: {fileID: 0}
+    - target: {fileID: 6877476350376008592, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de72aa81d5d6480479c8ea628583d0b0, type: 2}
     - target: {fileID: 8563229988257885105, guid: 2e358f917565c1e48b8756fba0022d77, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -161,18 +165,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82df033b5bc505b4aba3d64a3e120a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Airwaybill: {fileID: 21300000, guid: 133fddeab982543f4a9c3034b951d011, type: 3}
-  DGD: {fileID: 21300000, guid: f360f0c91c619034eadf7884e624c60a, type: 3}
+  Airwaybill: {fileID: 21300000, guid: b163903af14ab48c2bd80fd4f26a2fd9, type: 3}
+  DGD: {fileID: 21300000, guid: 1dd374dd5a3532b4aa3ee1244cbbc64e, type: 3}
   AWBoption:
   - Incorrect usage of "DG statement"
   - Missing "DG statement"
   Packageoption:
-  - "Missing the word \u201CUN\u201D"
-  - "Incorrect \u201CUN number\u201D"
-  - "Incorrect \u201CType Code\u201D"
+  - "Incorrect the \u201CProper Shipping Name\u201D in Package"
+  - "Incorrect \u201CUN number\u201D in Package"
+  - "Incorrect \u201CType Code\u201D in Package"
   Dgdoption:
-  - Missing Page Number
-  - Missing Full name of City or Airport
+  - "Missing the word \u201CUN\u201D in DGD"
+  - "Incorrect \u201CPacking Instruction\u201D in DGD"
+  - Missing Page Number in DGD
+  - "Incorrect \u201CClass or Division\u201D in DGD"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
+  - "Incorrect \u201CUN number\u201D in DGD"
   ans:
-  - correct
+  - "Incorrect \u201CUN number\u201D in Package"
+  - "Incorrect the \u201CProper Shipping Name\u201D in Package"
+  - "Missing \u201CDG statement\u201D"
+  - "Missing the word \u201CUN\u201D in DGD"
+  - "Incorrect \u201CPacking Instruction\u201D in DGD"
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}
