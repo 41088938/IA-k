@@ -317,7 +317,7 @@ public class boxesController : MonoBehaviour
                 }
                 else if (!checkAllNull(Choose))
                 {
-                    resultCheckList.AddCrossItem("You choose these wrong answers:", false);
+                    resultCheckList.AddCrossItem("<color=#CBB498>You choose these wrong answers:", false);
                     if (!checkAllNull(Choose))
                     {
                         for (int x = 0; x < Choose.Length; x++)
@@ -381,9 +381,10 @@ public class boxesController : MonoBehaviour
             }
             else
             {
+                resultCheckList.AddCrossItem("<color=#CBB498>You are missing these error:</color>",false);
                 for (int x = 0; x < ans.Length; x++)
                 {
-                    resultCheckList.AddCrossItem(ans[x],true);
+                    resultCheckList.AddCrossItem(ans[x], true);
                 }
                 if (ClickedBox.transform.name.Contains("barrel"))
                     icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
