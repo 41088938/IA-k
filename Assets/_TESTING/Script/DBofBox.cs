@@ -130,7 +130,7 @@ public class DBofBox : MonoBehaviour
             {
                 if (Packageoption[x].Contains("CAO"))
                     go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/CAO_Label");
-                else if (Packageoption[x].Contains("Category"))
+                else if (Packageoption[x].Contains("Hazard"))
                     go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/Category_Label");
                 else if (Packageoption[x].Contains("Gross"))
                     go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Type_B_Package/Permissible_Gross_Weight");

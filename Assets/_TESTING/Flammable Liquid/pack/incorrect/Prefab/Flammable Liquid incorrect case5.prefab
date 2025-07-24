@@ -176,27 +176,26 @@ MonoBehaviour:
   Airwaybill: {fileID: 21300000, guid: feb92f8905292456996095d6616aba54, type: 3}
   DGD: {fileID: 21300000, guid: ac48d40677af1314e8644c426abb4571, type: 3}
   AWBoption:
-  - Incorrect usage of "DG statement"
-  - Missing "DG statement"
+  - Incorrect usage of "DG statement" in AWB
+  - Missing "DG statement" in AWB
   Packageoption:
-  - "Missing \u201C UN\u201D prefix before UN number\u200B"
-  - "Incorrect \u201CUN number\u201D\u200B"
-  - "Incorrect the \u201CProper Shipping Name\u201D\u200B"
-  - "Missing Subsidiary Hazard Label\u200B"
-  - "Incorrect \u201CType Code\u201D\u200B"
-  - "Improper affix of the \u201COrientation Label\u201D\u200B"
+  - "Missing \u201C UN\u201D prefix before UN number\u200B in pakage"
+  - "Incorrect \u201CUN number\u201D in Package"
+  - "Incorrect the \u201CProper Shipping Name\u201D in Package"
+  - Missing Subsidiary Hazard Label in Package
+  - "Incorrect \u201CType Code\u201D in Package"
+  - "Improper affix of the \u201COrientation Label\u201D in Package"
   - "Missing additional \u201COrientation Label\u201D on the opposite side\u200B"
   Dgdoption:
   - Missing Page Number
   - "Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft
-    type\u200B"
+    type\u200B in DGD"
   - "Missing Full name of City or Airport\u200B"
   - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D\u200B"
-  - "Missing Full name of City or Airport\u200B"
-  - "Incorrect \u201CPacking Instruction\u201D\u200B"
-  - "Missing \u201C UN\u201D prefix before UN number\u200B"
-  - "Incorrect \u201CUN number\u201D\u200B"
-  - "Incorrect \u201CProper Shipping Name\u201D\u200B"
+  - "Incorrect \u201CPacking Instruction\u201D in DGD"
+  - "Missing \u201C UN\u201D prefix before UN number\u200B in DGD"
+  - "Incorrect \u201CUN number\u201D in DGD"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
   - "Incorrect \u201CClass or Division\u201D\u200B"
   - "Incorrect \u201CPacking Group\u201D\u200B"
   - "Incorrect \u201CType of Package\u201D declared\u200B"
@@ -206,7 +205,7 @@ MonoBehaviour:
   - Missing Subsidiary Hazard Label in Package
   - "Improper affix of the \u201COrientation Label\u201D in Package"
   - "Incorrect the \u201CProper Shipping Name\u201D in Package"
-  - Incorrect usage of "DG statement"
-  - "Incorrect \u201CClass or Division\u201D"
-  - "Incorrect \u201CPacking Group\u201D"
+  - Incorrect usage of "DG statement" in AWB
+  - "Incorrect \u201CClass or Division\u201D\u200B"
+  - "Incorrect \u201CPacking Group\u201D\u200B"
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}

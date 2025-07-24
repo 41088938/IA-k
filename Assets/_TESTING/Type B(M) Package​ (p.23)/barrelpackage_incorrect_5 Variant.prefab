@@ -153,8 +153,8 @@ MonoBehaviour:
   - Missing "Serial Number"
   - "Missing \u201CTrefoil\u201D Symbol"
   - "Missing \u201CPermissible Gross Weight"
-  - "Incorrect \u201DCategory\u201D Label"
-  - "Missing \u201DCategory\u201D Label on the opposite side"
+  - "Incorrect \u201DHazard\u201D Label"
+  - "Missing \u201DHazard\u201D Label on the opposite side"
   - "Missing \u201DCAO\u201D Label on the opposite side"
   Dgdoption:
   - Missing Page Number
