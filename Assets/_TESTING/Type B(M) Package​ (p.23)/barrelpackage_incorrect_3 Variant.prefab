@@ -161,7 +161,7 @@ MonoBehaviour:
   - Missing Full name of City or Airport
   - Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft type
   - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D"
-  - "Missing word \u201CUN\u201D in DGD"
+  - "Missing \u201C UN\u201D prefix before UN number\u200B"
   - "Incorrect \u201CCategory\u201D declared"
   - "Incorrect \u201CUN number\u201D in DGD"
   - "Incorrect \u201CProper Shipping Name\u201D in DGD"

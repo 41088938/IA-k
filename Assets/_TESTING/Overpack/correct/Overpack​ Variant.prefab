@@ -1024,7 +1024,7 @@ MonoBehaviour:
   - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D"
   - "Missing \u201CCargo Aircraft Only\u201D or \u201CCAO\u201D"
   Packageoption:
-  - "Missing the word \u201CUN\u201D in Package"
+  - "Missing \u201C UN\u201D prefix before UN number\u200B"
   - "Incorrect \u201CUN number\u201D in Package"
   - Missing the net quantity
   - Missing Div 5.1 Hazard Label
@@ -1050,7 +1050,7 @@ MonoBehaviour:
   - "Incorrect \u201CPacking Group\u201D"
   - "Missing \u201CSignature\u201D"
   - "Incorrect \u201CPacking Instruction\u201D"
-  - Missing the word "UN" in DGD
+  - "Missing \u201C UN\u201D prefix before UN number\u200B"
   ans:
   - correct
   DGInfo: {fileID: 201912937, guid: d7177f6d8c77945ffaf8b85a90beee0a, type: 3}
