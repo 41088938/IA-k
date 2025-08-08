@@ -224,7 +224,7 @@ public class StaticObjOrVar : MonoBehaviour
         }
         catch (Exception e)
         { 
-        
+            Debug.Log(e);
         }
     }
     public void openMenu()

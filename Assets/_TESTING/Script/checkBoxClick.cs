@@ -27,12 +27,12 @@ public class checkBoxClick : MonoBehaviour
         if (!checkBox)
         {
             GetComponent<Image>().sprite = pics[1];
-            GameObject.FindFirstObjectByType<boxesController>().addOption(this.transform.parent.GetComponent<TMP_Text>().text);
+            boxesController.getController().addOption(this.transform.parent.GetComponent<TMP_Text>().text);
         }
         else
         {
             GetComponent<Image>().sprite = pics[0];
-                GameObject.FindFirstObjectByType<boxesController>().removeOption(this.transform.parent.GetComponent<TMP_Text>().text);
+            boxesController.getController().removeOption(this.transform.parent.GetComponent<TMP_Text>().text);
         }
         checkBox = !checkBox;
     }

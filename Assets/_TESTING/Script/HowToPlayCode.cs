@@ -14,7 +14,6 @@ public class HowToPlayCode : MonoBehaviour
     {
         Pagecount = Resources.LoadAll("HowToPlay/").Length/2;
         img.sprite = Resources.Load<Sprite>("HowToPlay/"+page);
-        Debug.Log(Pagecount);
     }
 
     // Update is called once per frame

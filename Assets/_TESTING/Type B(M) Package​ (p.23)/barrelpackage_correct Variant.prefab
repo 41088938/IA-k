@@ -205,6 +205,7 @@ MonoBehaviour:
   - "Incorrect \u201CT.I.\u201D declared"
   - "Incorrect \u201CDIM\u201D declared"
   - "Missing \u201C24hr Emergency contact number\u201D"
+  - "Missing word \u201CUN\u201D in DGD"
   ans:
   - correct
   DGInfo: {fileID: -1061794870, guid: 17291dae0ed0646119d58079b925fc87, type: 3}

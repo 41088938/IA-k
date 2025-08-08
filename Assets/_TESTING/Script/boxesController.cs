@@ -14,7 +14,7 @@ using UnityEngine.UI;
 public class boxesController : MonoBehaviour
 {
     //choose SAVER
-    public string[] Choose;
+    ArrayList choose;
     //GameObj
     [SerializeField] TimerCode timerHolder;
     [SerializeField] GameObject PackageICON;
@@ -36,13 +36,12 @@ public class boxesController : MonoBehaviour
     [SerializeField] GameObject[] overpack;
     //var
     ArrayList gameObjects;
-    public int correctBox = 0;
+    public int correctBox;
     public int baseScore = 20;
     GameObject[] pointsWithRand;
     public bool getBox = false;
     int numberOfBox = 0;
     public int HowManyBox = 0;
-    static int correctboxstatic = 0;
     static boxesController controller = null;
     UnityEngine.InputSystem.Mouse mouse;
     int adder = 0;
@@ -56,6 +55,7 @@ public class boxesController : MonoBehaviour
         gameObjects.Add(TypeBM);
         gameObjects.Add(overpack);
         gameObjects.Add(battery);
+        correctBox = 0;
         controller = this;
         points = GameObject.FindGameObjectsWithTag("point");
         bg.SetActive(false);
@@ -151,13 +151,11 @@ public class boxesController : MonoBehaviour
         }
 
     }
-    public void initArrays(int x)
-    {
-        Choose = new string[x];
-    }
+
     public void BoxClick()
     {
         Steps.interactable = true;
+        choose = new ArrayList();
         StaticObjOrVar.NewGameUI[0].enabled = true;
         StaticObjOrVar.NewGameUI[1].enabled = true;
         StaticObjOrVar.NewGameUI[0].transform.Find("Steps").GetComponent<CanvasGroup>().interactable = true;
@@ -177,11 +175,12 @@ public class boxesController : MonoBehaviour
         }
         ClickedBox.GetComponent<DBofBox>().callImage();
         ClickedBox.GetComponent<DBofBox>().callOption();
-        string[] temp = ClickedBox.GetComponent<DBofBox>().getAns();
-        for (int x = 0; x < temp.Length; x++)
+        string[] on99 = ClickedBox.GetComponent<DBofBox>().getAns();
+        for (int x = 0; x < on99.Length; x++)
         {
-            Debug.Log(temp[x]);
+            Debug.Log(on99[x]);
         }
+        Debug.Log("---------------------------");
 ;
     }
     public void TurnLeft()
@@ -230,25 +229,11 @@ public class boxesController : MonoBehaviour
     }
     public void addOption(string msg)
     {
-            for (int x = 0; x < Choose.Length; x++)
-            {
-                if (Choose[x] == null)
-                {
-                    Choose[x] = msg;
-                    break;
-                }
-            }
+        choose.Add(msg);
     }
     public void removeOption(string msg)
     {
-            for (int a = 0; a < Choose.Length; a++)
-            {
-                if (Choose[a] == msg)
-                {
-                    Choose[a] = null;
-                    break;
-                }
-            }
+        choose.Remove(msg);
     }
     public void checkAns()
     {
@@ -256,7 +241,7 @@ public class boxesController : MonoBehaviour
         if (staticHolder.InProcedure5)
         {
             int temp = 0;
-            if (ans[0] == "correct")
+            if (ans[0].Equals("correct"))
             {
                 resultCheckList.AddCrossItem("It has no error!",true);
                 if(ClickedBox.transform.name.Contains("barrel"))
@@ -268,45 +253,56 @@ public class boxesController : MonoBehaviour
             {
                 for (int x = 0; x < ans.Length; x++)
                 {
-                    for (int y = 0; y < Choose.Length; y++)
+                    for (int y = 0; y < choose.Count; y++)
                     {
-                        if (ans[x] == Choose[y])
+                        if (ans[x].Equals((string)choose[y]))
                         {
-                            resultCheckList.AddTickItem(Choose[y]);
+                            resultCheckList.AddTickItem((string)choose[y]);
+                            choose.Remove(ans[x]);
                             ans[x] = null;
-                            Choose[y] = null;
                             temp++;
                             break;
                         }
                     }
                 }
-                if (temp == ans.Length && checkAllNull(Choose))
+                if (temp == ans.Length && choose.Count == 0)
                 {
                     if (ClickedBox.transform.name.Contains("barrel"))
                         icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_O");
                     else
                         icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
                     correctBox++;
-                    correctboxstatic++;
+                    Debug.Log("allcorrect");
                 }
-                else if (!checkAllNull(ans))
+                else if (!checkAllNull(ans)||choose.Count!=0)
                 {
-                    resultCheckList.AddCrossItem("<color=#CBB498>You are missing these error:</color>",false);
                     for (int x = 0; x < ans.Length; x++)
                     {
-                        if (ans[x] != null)
+                        Debug.Log(ans[x]);
+                    }
+                    for (int x = 0; x < choose.Count; x++)
+                    {
+                        Debug.Log(choose[x]);
+                    }
+                    resultCheckList.AddCrossItem("<color=#CBB498>You are missing these error:</color>",false);
+                    if (!checkAllNull(ans))
+                    {
+                        for (int x = 0; x < ans.Length; x++)
                         {
-                            resultCheckList.AddCrossItem(ans[x], true);
+                            if (ans[x] != null)
+                            {
+                                resultCheckList.AddCrossItem(ans[x], true);
+                            }
                         }
                     }
                     resultCheckList.AddCrossItem("<color=#CBB498>You choose these wrong answers:</color>", false);
-                    if (!checkAllNull(Choose))
+                    if (choose.Count != 0)
                     {
-                        for (int x = 0; x < Choose.Length; x++)
+                        for (int x = 0; x < choose.Count; x++)
                         {
-                            if (Choose[x] != null)
+                            if (choose[x] != null)
                             {
-                                resultCheckList.AddCrossItem(Choose[x],true);
+                                resultCheckList.AddCrossItem((string)choose[x],true);
                             }
                         }
                     }
@@ -314,24 +310,7 @@ public class boxesController : MonoBehaviour
                         icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
                     else
                         icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
-                }
-                else if (!checkAllNull(Choose))
-                {
-                    resultCheckList.AddCrossItem("<color=#CBB498>You choose these wrong answers:", false);
-                    if (!checkAllNull(Choose))
-                    {
-                        for (int x = 0; x < Choose.Length; x++)
-                        {
-                            if (Choose[x] != null)
-                            {
-                                resultCheckList.AddCrossItem(Choose[x],true);
-                            }
-                        }
-                    }
-                    if (ClickedBox.transform.name.Contains("barrel"))
-                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/barrel_X");
-                    else
-                        icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/X");
+
                 }
                 /*
                 if (temp == ans.Length)
@@ -377,7 +356,6 @@ public class boxesController : MonoBehaviour
                 else
                     icons[HowManyBox].sprite = Resources.Load<Sprite>("OX/O");
                 correctBox++;
-                correctboxstatic++;
             }
             else
             {
@@ -399,7 +377,7 @@ public class boxesController : MonoBehaviour
         //******************
         //Now only Time Trial, may not work with other
         //******************
-        Debug.Log(correctBox + " " + timerHolder.getTimerFloat());
+        Debug.Log(correctBox);
             StaticObjOrVar.NewGameUI[5].enabled = false;
             resultCheckList.RemoveAll();
             resultCheckList.GetComponentInParent<Canvas>().enabled = false;
@@ -426,29 +404,7 @@ public class boxesController : MonoBehaviour
             
         }
     }
-    public static void resetVarInTime()//for time trial, if no time
-    {
-        //******************
-        //Now only Time Trial, may not work with other
-        //******************
-         TimerCode.getDisableTimerCanvas();//disable timer display when display result panel
 
-        GameObject temp2 = GameObject.Find("GameCommonUINew/GameObject");
-        StaticObjOrVar.NewGameUI[7].enabled = true;
-        //set time text
-        StaticObjOrVar.NewGameUI[7].transform.GetChild(1).GetComponent<TMP_Text>().text = "" + "0";//(int)TimerCode.getTimerLeftStatic();
-        //set total score text, remain time * correct box
-        StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = "" + ((int)TimerCode.getTimerLeftStatic() * correctboxstatic);
-        //set correct box text
-        StaticObjOrVar.NewGameUI[7].transform.GetChild(4).transform.GetChild(2).GetComponent<TMP_Text>().text = "" + correctboxstatic;
-        int temp = temp2.transform.childCount;
-        for (int x = 0; x < temp; x++)
-        {
-            temp2.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(3).transform;
-        }
-       
-
-    }
     bool checkAllNull(string[] checkObj)
     {
         for (int x = 0; x < checkObj.Length; x++)
