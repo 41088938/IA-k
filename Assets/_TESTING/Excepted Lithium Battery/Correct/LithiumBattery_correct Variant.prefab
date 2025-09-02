@@ -60,14 +60,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -445137649591765684, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
       propertyPath: m_Name
       value: LithiumBattery_correct Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
       propertyPath: m_TagString
       value: box
       objectReference: {fileID: 0}
+    - target: {fileID: 2249601072385645600, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7742780737561719692, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409879660560474145, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424073627695423409, guid: ea88b7f9f15f00943bd867448c20f8b8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 984b90f7241c648308e69f0a2b143a1c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -176,6 +176,8 @@ public class StaticObjOrVar : MonoBehaviour
         {
             reasons[x].enabled = false;
         }
+
+        timer.setTimerStop(true); //time stop show checklist
     }
     public void packagebtn()
     {
