@@ -159,17 +159,17 @@ MonoBehaviour:
   Airwaybill: {fileID: 21300000, guid: 0e768707ae058fb40b215c9be0cc448c, type: 3}
   DGD: {fileID: 21300000, guid: 4e1590a8aa22ddc4989da6193def552c, type: 3}
   AWBoption:
-  - Incorrect usage of "DG statement" / Need to be removed
-  - "Missing \u201C UN\u201D prefix before UN number\u200B"
-  - Missing the "Net Quantity of Dry Ice"
+  - Incorrect usage of "DG statement" / Need to be removed in Airway Bill
+  - "Missing \u201C UN\u201D prefix before UN number\u200B in Airway Bill"
+  - Missing the "Net Quantity of Dry Ice" in Airway Bill
   - Missing the "Proper Shipping Name" in Airway Bill
   - Incorrect "UN number" in Airway Bill
   Packageoption:
-  - Missing the "Net Quantity weight of Dry Ice"
-  - Incorrect Hazard Label
-  - Incorrect placement of the "shipper and consignee Mark"
+  - Missing the "Net Quantity weight of Dry Ice" in Package
+  - Incorrect Hazard Label in Package
+  - Incorrect placement of the "shipper and consignee Mark" in Package
   - Missing the "Proper Shipping Name" in Package
-  - "Missing \u201C UN\u201D prefix before UN number\u200B"
+  - "Missing \u201C UN\u201D prefix before UN number\u200B in Package"
   - Incorrect "UN number" in Package
   Dgdoption:
   - NAN, there is no DGD

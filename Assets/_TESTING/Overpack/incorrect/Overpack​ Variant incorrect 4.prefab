@@ -1077,43 +1077,46 @@ MonoBehaviour:
   Airwaybill: {fileID: 21300000, guid: 2e9c829974949a64e9e75d0ce4c7533c, type: 3}
   DGD: {fileID: 21300000, guid: 7b182ef5720134d4596ceaf2704cf63d, type: 3}
   AWBoption:
-  - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D"
-  - "Missing \u201CCargo Aircraft Only\u201D or \u201CCAO\u201D"
+  - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D in Airway
+    Bill"
+  - "Missing \u201CCargo Aircraft Only\u201D or \u201CCAO\u201D in Airway Bill"
   Packageoption:
-  - "Missing \u201C UN\u201D prefix before UN number\u200B"
+  - "Missing \u201C UN\u201D prefix before UN number\u200B in Package"
   - "Incorrect \u201CUN number\u201D in Package"
-  - Missing the net quantity
-  - Missing Div 5.1 Hazard Label
-  - Not Required to have UN packaging
-  - "Missing the word \u201COverpack\u201D"
-  - "Missing additional \u201COrientation Label\u201D on the opposite side"
-  - "Improper affix of the \u201COrientation Label\u201D"
-  - Missing CAO Handling Label
-  - Incorrect Div 6.1 Hazard Label
+  - Missing the net quantity in Package
+  - Missing Div 5.1 Hazard Label in Package
+  - Not Required to have UN packaging in Package
+  - "Missing the word \u201COverpack\u201D in Package"
+  - "Missing additional \u201COrientation Label\u201D on the opposite side in Package"
+  - "Improper affix of the \u201COrientation Label\u201D in Package"
+  - Missing CAO Handling Label in Package
+  - Incorrect Div 6.1 Hazard Label in Package
   - "Incorrect \u201CProper Shipping Name\u201D in Package"
-  - Not Required to have UN packaging
   Dgdoption:
-  - Missing Page Number
+  - Missing Page Number in DGD
   - Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft type
-  - Missing Full name of City or Airport
-  - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D"
-  - "Missing the word \u201COverpack used\u201D"
+    in DGD
+  - Missing Full name of City or Airport in DGD
+  - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D
+    in DGD"
+  - "Missing the word \u201COverpack used\u201D in DGD"
   - "Incorrect \u201CUN number\u201D in DGD"
-  - "Incorrect \u201CClass or Division\u201D"
-  - Missing Subsidiary Hazard
+  - "Incorrect \u201CClass or Division\u201D in DGD"
+  - Missing Subsidiary Hazard in DGD
   - "Incorrect \u201CProper Shipping Name\u201D in DGD"
-  - "Missing \u201C24hr Emergency contact number\u201D"
-  - "Incorrect \u201CPacking Group\u201D"
-  - "Missing \u201CSignature\u201D"
-  - "Incorrect \u201CPacking Instruction\u201D"
-  - "Missing \u201C UN\u201D prefix before UN number\u200B"
+  - "Missing \u201C24hr Emergency contact number\u201D in DGD"
+  - "Incorrect \u201CPacking Group\u201D in DGD"
+  - "Missing \u201CSignature\u201D in DGD"
+  - "Incorrect \u201CPacking Instruction\u201D in DGD"
+  - "Missing \u201C UN\u201D prefix before UN number\u200B in DGD"
   ans:
-  - Missing Subsidiary Hazard
-  - "Missing the word \u201COverpack used\u201D"
-  - "Missing \u201CSignature\u201D"
-  - "Incorrect \u201CPacking Instruction\u201D"
-  - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D"
-  - Incorrect Div 6.1 Hazard Label
+  - Incorrect Div 6.1 Hazard Label in Package
   - "Incorrect \u201CProper Shipping Name\u201D in Package"
-  - Not Required to have UN packaging
+  - Not Required to have UN packaging in Package
+  - "Missing the word \u201COverpack\u201D in Package"
+  - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D in Airway
+    Bill"
+  - Missing Page Number in DGD
+  - "Incorrect \u201CClass or Division\u201D in DGD"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
   DGInfo: {fileID: 201912937, guid: d7177f6d8c77945ffaf8b85a90beee0a, type: 3}

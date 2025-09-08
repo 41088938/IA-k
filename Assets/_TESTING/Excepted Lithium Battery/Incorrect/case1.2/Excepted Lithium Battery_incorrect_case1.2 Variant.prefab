@@ -151,18 +151,18 @@ MonoBehaviour:
   Airwaybill: {fileID: 21300000, guid: d568ade46a7e8184b808fd98510c8666, type: 3}
   DGD: {fileID: 21300000, guid: 4e1590a8aa22ddc4989da6193def552c, type: 3}
   AWBoption:
-  - Incorrect usage of "DG statement"
-  - Incorrect Lithium metal batteries Section II statement.
-  - Missing Lithium metal batteries Section II statement.
+  - Incorrect usage of "DG statement" / Need to be removed in Airway Bill
+  - Incorrect Lithium metal batteries Section II statement in Airway Bill
+  - Missing Lithium metal batteries Section II statement in Airway Bill
   Packageoption:
-  - Incorrect placement of the "shipper and consignee Mark"
+  - Incorrect placement of the "shipper and consignee Mark" in Package
   - Missing "UN Number" in Package
-  - Incorrect usage of lithium or sodium ion battery label
+  - Incorrect usage of lithium or sodium ion battery label in Package
   Dgdoption:
   - NAN, there is no DGD
   ans:
-  - Incorrect usage of "DG statement"
   - Missing "UN Number" in Package
+  - Incorrect usage of "DG statement" / Need to be removed in Airway Bill
   DGInfo: {fileID: 870412924, guid: 7515fe4fe547d41c9846ea30561d0c28, type: 3}
 --- !u!114 &6475371445972161798
 MonoBehaviour:

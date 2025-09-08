@@ -148,35 +148,41 @@ MonoBehaviour:
   Airwaybill: {fileID: 21300000, guid: eca6b84dd2349354b905729a6cb44856, type: 3}
   DGD: {fileID: 21300000, guid: ab976dd6658f1364890d51a66bf205c0, type: 3}
   AWBoption:
-  - "Incorrect \u201CDG Statement\u201D"
-  - "Missing \u201CDG statement\u201D"
-  - "Missing the wording  \u201CCAO\u201D"
+  - "Incorrect \u201CDG Statement\u201D in Airway Bill"
+  - "Missing \u201CDG statement\u201D in Airway Bill"
+  - "Missing the wording  \u201CCAO\u201D in Airway Bill"
   Packageoption:
-  - "Incorrect \u201CPSN\u201D"
+  - "Incorrect \u201CPSN\u201D in Package"
   - "Incorrect \u201CUN number\u201D in Package"
-  - Missing "Serial Number"
-  - "Missing \u201CTrefoil\u201D Symbol"
-  - "Missing \u201CPermissible Gross Weight"
-  - "Incorrect \u201DHazard\u201D Label"
-  - "Missing \u201DHazard\u201D Label on the opposite side"
-  - "Missing \u201DCAO\u201D Label on the opposite side"
+  - Missing "Serial Number" in Package
+  - "Missing \u201CTrefoil\u201D Symbol in Package"
+  - "Missing \u201CPermissible Gross Weight\" in Package"
+  - "Incorrect \u201DCategory\u201D Label in Package"
+  - "Missing \u201DCategory\u201D Label on the opposite side in Package"
+  - "Missing \u201DCAO\u201D Label on the opposite side in Package"
   Dgdoption:
-  - Missing Page Number
-  - Missing Full name of City or Airport
+  - Missing Page Number in DGD
+  - Missing Full name of City or Airport in DGD
   - Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft type
-  - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D"
-  - "Missing \u201C UN\u201D prefix before UN number\u200B"
-  - "Incorrect \u201CCategory\u201D declared"
+    in DGD
+  - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D
+    in DGD"
+  - "Missing \u201C UN\u201D prefix before UN number in DGD\u200B"
+  - "Incorrect \u201CCategory\u201D declared in DGD"
   - "Incorrect \u201CUN number\u201D in DGD"
   - "Incorrect \u201CProper Shipping Name\u201D in DGD"
-  - "Incorrect \u201CType of Package\u201D and Activity declared"
-  - "Missing \u201CIdentification mark\u201D"
-  - "Missing the word \u201CAttached\u201D"
-  - "Incorrect \u201CT.I.\u201D declared"
-  - "Incorrect \u201CDIM\u201D declared"
-  - "Missing \u201C24hr Emergency contact number\u201D"
+  - "Incorrect \u201CType of Package\u201D and Activity declared in DGD"
+  - "Missing \u201CIdentification mark\u201D in DGD"
+  - "Missing the word \u201CAttached\u201D in DGD"
+  - "Incorrect \u201CT.I.\u201D declared in DGD"
+  - "Incorrect \u201CDIM\u201D declared in DGD"
+  - "Missing \u201C24hr Emergency contact number\u201D in DGD"
   ans:
-  - Missing Full name of City or Airport
-  - "Missing \u201CDG statement\u201D"
-  - "Incorrect \u201DCategory\u201D Label"
+  - "Incorrect \u201DCategory\u201D Label in Package"
+  - "Missing \u201CTrefoil\u201D Symbol in Package"
+  - "Incorrect \u201CUN number\u201D in Package"
+  - "Missing the wording  \u201CCAO\u201D in Airway Bill"
+  - "Incorrect \u201CProper Shipping Name\u201D in DGD"
+  - "Incorrect \u201CType of Package\u201D and Activity declared in DGD"
+  - "Missing the word \u201CAttached\u201D in DGD"
   DGInfo: {fileID: -1061794870, guid: 17291dae0ed0646119d58079b925fc87, type: 3}
