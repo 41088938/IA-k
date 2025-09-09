@@ -16,11 +16,16 @@ public class StaticObjOrVar : MonoBehaviour
 
     [SerializeField] Button[] rejReasonBtns;
 
+    [SerializeField]
+    //StepBtnGroupManager stepBtnGroupManager;
+
     public static GameObject ICONBTN;
-    int pageNum = 1;
+    public int pageNum = 1;
     public bool InProcedure5 = false;
     public static GameObject selectedObj;
     int timerHave = 0;
+
+    public bool confirmedAns;
 
     // Start is called before the first frame update
     void Start()
@@ -117,35 +122,54 @@ public class StaticObjOrVar : MonoBehaviour
             NewGameUI[x].enabled = true;
             ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
             pageNum = x;
-        }
-        else
-        {
+            NewGameUI[6].enabled = false;
 
-            if (x == 4)
+            if (pageNum == 4)
             {
-                NewGameUI[pageNum].enabled = false;
-                ProcedureIcons[pageNum - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
-                NewGameUI[x + 1].enabled = true;
-                ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
-                pageNum = x + 1;
+                if (confirmedAns)
+                {
+                    NewGameUI[4].enabled = false;
+                    NewGameUI[6].enabled = true;
+                }
+                else
+                {
+                    NewGameUI[4].enabled = true;
+                    NewGameUI[6].enabled = false;
+                }
             }
-            else if (pageNum == 5)
-            {
-                NewGameUI[pageNum].enabled = false;
-                ProcedureIcons[pageNum - 2].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
-                NewGameUI[x].enabled = true;
-                ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
-                pageNum = x;
-            }
+                
+        }
             else
             {
-                NewGameUI[pageNum].enabled = false;
-                ProcedureIcons[pageNum - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
-                NewGameUI[x].enabled = true;
-                ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
-                pageNum = x;
+
+                if (x == 4)
+                {
+
+                    NewGameUI[pageNum].enabled = false;
+                    ProcedureIcons[pageNum - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+                    NewGameUI[x + 1].enabled = true;
+                    ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
+                    pageNum = x + 1;
+
+
+                }
+                else if (pageNum == 5)
+                {
+                    NewGameUI[pageNum].enabled = false;
+                    ProcedureIcons[pageNum - 2].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+                    NewGameUI[x].enabled = true;
+                    ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
+                    pageNum = x;
+                }
+                else
+                {
+                    NewGameUI[pageNum].enabled = false;
+                    ProcedureIcons[pageNum - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+                    NewGameUI[x].enabled = true;
+                    ProcedureIcons[x - 1].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
+                    pageNum = x;
+                }
             }
-        }
 
         if (x == 1) {//check if on package check page and allow rotate obj
             boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = false;
@@ -167,24 +191,36 @@ public class StaticObjOrVar : MonoBehaviour
         NewGameUI[pageNum].enabled = false;
         NewGameUI[6].enabled = true;
         boxescontroller.checkAns();
-        NewGameUI[0].transform.Find("Steps").GetComponent<CanvasGroup>().interactable = false;
-        ProcedureIcons[0].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
-        ProcedureIcons[3].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
+        //NewGameUI[0].transform.Find("Steps").GetComponent<CanvasGroup>().interactable = false;
+        //ProcedureIcons[0].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[2];
+        //ProcedureIcons[3].sprite = Resources.LoadAll<Sprite>("Steps/Icons")[1];
         InProcedure5 = false;
-        pageNum = 1;
+       // pageNum = 1;
         for (int x = 0; x < 3; x++)
         {
             reasons[x].enabled = false;
         }
 
         timer.setTimerStop(true); //time stop show checklist
+        setIsConfirmedAns(true);
+    }
+
+    public void iniStaticObjVar()
+    {
+        pageNum = 1;
+        setIsConfirmedAns(false);
+    }
+    
+    public void setIsConfirmedAns(bool input)
+    {
+        confirmedAns = input;
     }
     public void packagebtn()
     {
         reasons[0].enabled = true;
         reasons[1].enabled = false;
         reasons[2].enabled = false;
-        
+
     }
     public void AWBbtn()
     {
@@ -232,11 +268,13 @@ public class StaticObjOrVar : MonoBehaviour
     public void openMenu()
     {
         //To avoid people can click these when pausing
-        NewGameUI[0].enabled = false;
+        //NewGameUI[0].enabled = false;
         //
         Menu.enabled = true;
         timer.setTimerStop(true);
-        boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = true;
+        if (boxescontroller.ClickedBox!=null) {
+            boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = true;
+        }
         StartCoroutine(moveMenu());
     }
     IEnumerator moveMenu()

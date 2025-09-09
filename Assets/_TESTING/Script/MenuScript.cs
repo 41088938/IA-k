@@ -43,8 +43,11 @@ public class MenuScript : MonoBehaviour
     { 
         this.gameObject.GetComponent<Canvas>().enabled = false;
         timer.setTimerStop(false);
-        boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = false;
-        StaticObjOrVar.NewGameUI[0].enabled = true;
+        if (boxescontroller.ClickedBox != null)
+        {
+            boxescontroller.ClickedBox.GetComponent<Rotate3DObject1>().pause = false;
+        }
+        //StaticObjOrVar.NewGameUI[0].enabled = true;
     }
     public void clickHowToPlay()
     { 
