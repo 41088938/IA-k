@@ -148,6 +148,7 @@ MonoBehaviour:
     in DGD"
   - "Incorrect \u201CUN number\u201D in DGD"
   - "Incorrect \u201CDIM\u201D declared in DGD"
+  - "Incorrect \u201CT.I.\u201D declared in DGD"
   DGInfo: {fileID: -1061794870, guid: 17291dae0ed0646119d58079b925fc87, type: 3}
 --- !u!65 &8796681444544850457
 BoxCollider:
