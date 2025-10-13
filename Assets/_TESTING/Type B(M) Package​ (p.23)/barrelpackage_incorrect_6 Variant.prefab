@@ -146,7 +146,6 @@ MonoBehaviour:
   - "Missing \u201CPermissible Gross Weight\" in Package"
   - "Incorrect \u201CDG Statement\u201D in Airway Bill"
   - Missing Page Number in DGD
-  - Missing Page Number in DGD
   - "Incorrect \u201CCategory\u201D declared in DGD"
   - "Incorrect \u201CType of Package\u201D and Activity declared in DGD"
   DGInfo: {fileID: -1061794870, guid: 17291dae0ed0646119d58079b925fc87, type: 3}
