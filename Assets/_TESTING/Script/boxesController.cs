@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scorm.Examples;
+
 //using Fungus;
 using TMPro;
 using Unity.VisualScripting;
@@ -45,6 +47,8 @@ public class boxesController : MonoBehaviour
     static boxesController controller = null;
     UnityEngine.InputSystem.Mouse mouse;
     int adder = 0;
+
+    public SetLessonState SCORM_Manager;
 
     // Start is called before the first frame update
     void Start()
@@ -378,21 +382,36 @@ public class boxesController : MonoBehaviour
         //Now only Time Trial, may not work with other
         //******************
         Debug.Log(correctBox);
-            StaticObjOrVar.NewGameUI[5].enabled = false;
-            resultCheckList.RemoveAll();
-            resultCheckList.GetComponentInParent<Canvas>().enabled = false;
-            Destroy(ClickedBox);
-            bg.SetActive(false);
-            getBox = false;
-            StaticObjOrVar.NewGameUI[0].enabled = false;
-        
-        if (HowManyBox == numberOfBox|| timerHolder.getTimerFloat()<=0)
+        StaticObjOrVar.NewGameUI[5].enabled = false;
+        resultCheckList.RemoveAll();
+        resultCheckList.GetComponentInParent<Canvas>().enabled = false;
+        Destroy(ClickedBox);
+        bg.SetActive(false);
+        getBox = false;
+        StaticObjOrVar.NewGameUI[0].enabled = false;
+
+        if (HowManyBox == numberOfBox || timerHolder.getTimerFloat() <= 0)
         {
+            int baseBoxScore, CorrectboxBouns;
+            float RemainTimeRatio,finalScore;
+
+            baseBoxScore= 12 * correctBox;
+            CorrectboxBouns = 4 * correctBox;
+            RemainTimeRatio = (int)timerHolder.getTimerFloat()*0.001667f;
+            finalScore = Mathf.Round( ( baseBoxScore+(CorrectboxBouns*RemainTimeRatio) ) *100f)*0.01f;
+            
+
             StaticObjOrVar.NewGameUI[7].enabled = true;
             //FinishLevel/TotalTime/Time
-            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+ (int)timerHolder.getTimerFloat();
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(1).transform.GetChild(1).GetComponent<TMP_Text>().text = "" + (int)timerHolder.getTimerFloat();
             //FinishLevel/Score/Time
-            StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = ""+((int)timerHolder.getTimerFloat()*correctBox);
+            StaticObjOrVar.NewGameUI[7].transform.GetChild(2).transform.GetChild(1).GetComponent<TMP_Text>().text = "" + (finalScore);
+
+            if (SCORM_Manager)
+            {//check if scorm manager is null
+                SCORM_Manager.setScore(finalScore);//pass score to scorm manager 
+                SCORM_Manager.LessonState();
+            }
             //set correct box text
             StaticObjOrVar.NewGameUI[7].transform.GetChild(4).transform.GetChild(2).GetComponent<TMP_Text>().text = "" + correctBox;
             int temp = PackageICON.transform.childCount;
@@ -401,9 +420,11 @@ public class boxesController : MonoBehaviour
                 PackageICON.transform.GetChild(0).parent = StaticObjOrVar.NewGameUI[7].transform.GetChild(3).transform;
             }
             timerHolder.disableTimerCanvas();//disable timer display when display result panel
-            
+
         }
     }
+    
+
 
     bool checkAllNull(string[] checkObj)
     {
