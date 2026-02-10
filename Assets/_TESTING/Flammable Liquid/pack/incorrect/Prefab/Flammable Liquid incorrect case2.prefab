@@ -246,7 +246,7 @@ MonoBehaviour:
   ans:
   - "Incorrect \u201CType Code\u201D in Package"
   - "Incorrect \u201CUN number\u201D in Package"
-  - "Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft
-    type\u200B in DGD"
+  - "Incorrect Shipment type crossed out or Need to cross out the word \u201CRadioactive\u201D\u200B
+    in DGD"
   - "Missing Full name of City or Airport\u200B in DGD"
   DGInfo: {fileID: -874292636, guid: d7f03a51702224c87a5cfee4b569caa5, type: 3}

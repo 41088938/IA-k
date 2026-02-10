@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Airwaybill: {fileID: 21300000, guid: 7ca9ee32d97e0aa4ea54a3643456b8f4, type: 3}
-  DGD: {fileID: 21300000, guid: d1d08a4244cd1a2429e8a79aaad04e42, type: 3}
+  DGD: {fileID: 21300000, guid: 8bdb074866d50c64082a0c61a66bbfc3, type: 3}
   AWBoption:
   - "Incorrect \u201CDG Statement\u201D/Missing \u201CDG statement\u201D in Airway
     Bill"
