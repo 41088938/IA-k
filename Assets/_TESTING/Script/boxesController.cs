@@ -397,7 +397,7 @@ public class boxesController : MonoBehaviour
 
             baseBoxScore= 12 * correctBox;
             CorrectboxBouns = 4 * correctBox;
-            RemainTimeRatio = (int)timerHolder.getTimerFloat()*0.001667f;
+            RemainTimeRatio = (int)timerHolder.getTimerFloat()*0.001818f;
             finalScore = Mathf.Round( ( baseBoxScore+(CorrectboxBouns*RemainTimeRatio) ) *100f)*0.01f;
             
 

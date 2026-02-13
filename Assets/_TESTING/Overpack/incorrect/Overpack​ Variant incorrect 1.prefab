@@ -1092,6 +1092,7 @@ MonoBehaviour:
   - Missing CAO Handling Label in Package
   - Incorrect Div 6.1 Hazard Label in Package
   - "Incorrect \u201CProper Shipping Name\u201D in Package"
+  - Div 5.1 and Class 3 need segregation
   Dgdoption:
   - Missing Page Number in DGD
   - Incorrect Aircraft type crossed out or Need to cross out unrelated aircraft type
@@ -1109,6 +1110,7 @@ MonoBehaviour:
   - "Missing \u201CSignature\u201D in DGD"
   - "Incorrect \u201CPacking Instruction\u201D in DGD"
   - "Missing \u201C UN\u201D prefix before UN number\u200B in DGD"
+  - Div 5.1 and Class 3 need segregation
   ans:
   - "Missing \u201C UN\u201D prefix before UN number\u200B in Package"
   - "Incorrect \u201CUN number\u201D in Package"
@@ -1118,4 +1120,6 @@ MonoBehaviour:
     in DGD
   - "Missing \u201C24hr Emergency contact number\u201D in DGD"
   - "Missing \u201CSignature\u201D in DGD"
+  - Div 5.1 and Class 3 need segregation
+  - Div 5.1 and Class 3 need segregation
   DGInfo: {fileID: 201912937, guid: d7177f6d8c77945ffaf8b85a90beee0a, type: 3}

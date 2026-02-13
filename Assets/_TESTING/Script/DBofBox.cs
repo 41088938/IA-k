@@ -117,8 +117,13 @@ public class DBofBox : MonoBehaviour
                 {
                     if (Packageoption[x].Contains("CAO"))
                         go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/CAO_Label");
-                    else if (Packageoption[x].Contains("5.1"))
-                        go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Hazard_Label_5.1");
+                    else if (Packageoption[x].Contains("5.1")){
+                        if(Packageoption[x].Contains("Class 3"))
+                        {
+                            go.transform.GetChild(2).gameObject.SetActive(false);
+                        }else
+                            go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Hazard_Label_5.1");
+                    }
                     else if (Packageoption[x].Contains("6.1"))
                         go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Hazard_Label_6");
                     else if (Packageoption[x].Contains("Orientation"))
