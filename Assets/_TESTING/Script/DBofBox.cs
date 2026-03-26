@@ -129,7 +129,17 @@ public class DBofBox : MonoBehaviour
                     else if (Packageoption[x].Contains("Orientation"))
                         go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Overpack_Missing_Orientation_Label");
                     else if (Packageoption[x].Contains("UN"))
-                        go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Overpack_Missing_UN");
+                    {
+                        if (Packageoption[x].Contains("UN pack"))
+                        {
+                            go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Overpack_UN_Icon");
+                        }
+                        else
+                        {
+                            go.transform.GetChild(2).GetComponent<Image>().sprite = Resources.Load<Sprite>("Missing_icon/Overpack/Overpack_Missing_UN");
+                        }
+                        
+                    }                       
                     else
                         go.transform.GetChild(2).gameObject.SetActive(false);
                 }
